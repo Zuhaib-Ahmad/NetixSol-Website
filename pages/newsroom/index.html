@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from blockstream.com/newsroom/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Nov 2020 08:42:29 GMT -->
+
+<head>
+    <link rel="stylesheet" href="../../src/css/styles8c7a.css?v=1.103">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="../../src/imgs/img/favicon_new.png"> <!-- font awesome -->
+    <link href="../../src/others/assets/font-awesome/css/all.min.css" rel="stylesheet"> <!-- rss feed -->
+    <link rel="alternate" type="application/rss+xml" title="Blockstream: Bitcoin & digital asset infrastructure"
+        href="../../src/others/feed.xml"> <!-- needs to load before dom so author name gets formatted -->
+    <script type="text/javascript" src="../../src/others/assets/js/utility-scripts/blog-author.js"></script>
+    <script type="text/javascript" src="../../src/others/assets/js/header_backdrop.js" defer></script>
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../src/others/assets/unpkg/axios%400.21.0/dist/axios.min.js" defer></script>
+    <script type="text/javascript" src="../assets/js/utility-scripts/blog-language-selection.js" defer></script>
+    <!-- landing page -->
+    <script type="text/javascript" src="../../src/others/assets/js/navigationedce.js?v=1.101" defer></script>
+    <script type="text/javascript" src="../../src/others/assets/js/fly-in.js" async></script>
+    <script type="text/javascript" src="../../src/others/assets/js/facebook-sdk.js" async></script>
+    <script type="text/javascript" src="../../src/others/assets/js/formSubmission.js" async></script>
+    <script type="text/javascript" src="../../src/others/assets/js/back-to-top.js" defer></script>
+    <script type="text/javascript" src="../../src/others/assets/js/utility-scripts/modals.js" defer></script> <!-- transifex -->
+    <script type="text/javascript">
+        window.liveSettings = {
+            api_key: "de04b1185f2b4c2faf732d4994f9a7d6"
+        }
+    </script>
+    <script type="text/javascript" src="../../src/others/transifex/live.js" defer></script>
+    <script type="text/javascript" src="../../src/others/assets/js/utility-scripts/language-selector.js" defer></script>
+    <!-- analytics tracking code -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136091963-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-136091963-1');
+    </script> <!-- hotjar tracking code -->
+    <!-- Hotjar Tracking Code for www.blockstream.com -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 1351588,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script> <!-- meta data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:url" content="https://blockstream.com/newsroom/" />
+    <meta property="og:site_name" content="Blockstream: Bitcoin and digital asset infrastructure" />
+    <meta content="Blockstream: Bitcoin and digital asset infrastructure" />
+    <title>Newsroom</title>
+    <meta property="og:title" content="Newsroom">
+    <meta name="twitter:title" content="Newsroom" />
+    <meta property="og:description" content="Blockstream Newsroom">
+    <meta name="twitter:description" content="Blockstream Newsroom">
+    <meta name="description" content="Blockstream Newsroom">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website" /> <!-- sets meta image to be used for social shares -->
+    <meta property="og:image" content="https://blockstream.com/img/img/blks_logo_1920x1080.png" />
+    <meta name="twitter:image" content="https://blockstream.com/img/img/blks_logo_1920x1080.png" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header header_press-releases">
+            <div class="header_primary" id="header-primary">
+                <div class="header_primary_logo"> <a href="../../index.html"><img src="../../src/imgs/icons/logo_blks.png"
+                            alt="Blockstream"></a></div>
+                <div class="hamburger header_primary_mobile-menu-button" onclick="mobileNavToggle()">
+                    <div class="bar top"></div>
+                    <div class="bar middle"></div>
+                    <div class="bar bottom"></div>
+                </div>
+                <nav class="header_primary_navigation">
+                    <ul class="header_primary_navigation_list">
+                        <li class="header_primary_navigation_item"> <a
+                                class='header_primary_navigation_item_link header_primary_navigation_dropdown-button '
+                                id="nav-dropdown-products" href="#" onclick="mobileNavDropdown(event)"> Products <span>
+                                    <div class="arrow-icon">
+                                        <div class="arrow a-top"></div>
+                                        <div class="arrow a-bottom"></div>
+                                    </div>
+                                </span> </a>
+                            <ul class="header_primary_navigation_item_sub-list" id="primary_navigation_list_products">
+                                <li class="header_primary_navigation_item_sub-list_header">
+                                    <ul class="product-subnav-grid-container">
+                                        <li class="header_primary_navigation_item_sub-list_item liquid-gradBg"
+                                            id="primary_navigation_liquid"> <a
+                                                class='product-subnav-grid-container_link ' data-nav-item="liquid"
+                                                href="../liquid/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Liquid Network</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            A sidechain-based settlement network for traders.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_liquid_outline.svg" />
+                                                    </div>
+                                                </div>
+                                            </a> <a class='product-subnav-grid-container_link_hover liquid-grad-hover '
+                                                data-nav-item="liquid" href="../liquid/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Liquid Network</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            A sidechain-based settlement network for traders.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_liquid_solid.svg" />
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                        <li class="header_primary_navigation_item_sub-list_item aqua-gradBg"
+                                            id="primary_navigation_block-explorer"> <a
+                                                class='product-subnav-grid-container_link ' data-nav-item="aqua"
+                                                href="../aqua/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            AQUA</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            A simple Bitcoin and Liquid wallet built for everyone.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_aqua_outline.svg" />
+                                                    </div>
+                                                </div>
+                                            </a> <a class='product-subnav-grid-container_link_hover aqua-gradBg-hover '
+                                                data-nav-item="aqua" href="../aqua/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            AQUA</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            A simple Bitcoin and Liquid wallet built for everyone.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_aqua_solid.svg" />
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                        <li class="header_primary_navigation_item_sub-list_item amp-gradBg"
+                                            id="primary_navigation_block-explorer"> <a
+                                                class='product-subnav-grid-container_link ' data-nav-item="amp"
+                                                href="../amp/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Blockstream AMP</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            An API to issue and manage digital assets on the Liquid
+                                                            Network.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_amp_outline.svg" />
+                                                    </div>
+                                                </div>
+                                            </a> <a class='product-subnav-grid-container_link_hover amp-gradBg-hover '
+                                                data-nav-item="amp" href="../amp/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Blockstream AMP</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            An API to issue and manage digital assets on the Liquid
+                                                            Network.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_amp_solid.svg" />
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                        <li class="header_primary_navigation_item_sub-list_item green-gradBg"
+                                            id="primary_navigation_ice"> <a class='product-subnav-grid-container_link '
+                                                data-nav-item="green-address" href="../green/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Blockstream Green</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            A multi-platform, feature-rich Bitcoin and Liquid wallet.
+                                                        </p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_green_outline.svg" />
+                                                    </div>
+                                                </div>
+                                            </a> <a class='product-subnav-grid-container_link_hover green-gradBg-hover '
+                                                data-nav-item="green-address" href="../green/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Blockstream Green</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            A multi-platform, feature-rich Bitcoin and Liquid wallet.
+                                                        </p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_green_solid.svg" />
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                        <li class="header_primary_navigation_item_sub-list_item mining-gradBg"
+                                            id="primary_navigation_green-address"> <a
+                                                class='product-subnav-grid-container_link ' data-nav-item="mining"
+                                                href="../mining/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Blockstream Mining</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            Colocation services for Bitcoin mining operations.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_mining_outline.svg" />
+                                                    </div>
+                                                </div>
+                                            </a> <a
+                                                class='product-subnav-grid-container_link_hover mining-gradBg-hover '
+                                                data-nav-item="mining" href="../mining/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Blockstream Mining</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            Colocation services for Bitcoin mining operations.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_mining_solid.svg" />
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                        <li class="header_primary_navigation_item_sub-list_item satellite-gradBg"
+                                            id="primary_navigation_satellite"> <a
+                                                class='product-subnav-grid-container_link ' data-nav-item="satellite"
+                                                href="../satellite/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Blockstream Satellite</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            The Bitcoin blockchain, delivered from space.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_satellite_outline.svg" />
+                                                    </div>
+                                                </div>
+                                            </a> <a
+                                                class='product-subnav-grid-container_link_hover satellite-gradBg-hover '
+                                                data-nav-item="satellite" href="../satellite/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Blockstream Satellite</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            The Bitcoin blockchain, delivered from space.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_satellite_solid.svg" />
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                        <li class="header_primary_navigation_item_sub-list_item explorer-gradBg"
+                                            id="primary_navigation_mining"> <a
+                                                class='product-subnav-grid-container_link'
+                                                data-nav-item="block-explorer" href="https://blockstream.info/"
+                                                target="_blank">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Blockstream Explorer</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            Search data from the Bitcoin and Liquid blockchains.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_explorer_outline.svg" />
+                                                    </div>
+                                                </div>
+                                            </a> <a
+                                                class='product-subnav-grid-container_link_hover explorer-gradBg-hover'
+                                                data-nav-item="block-explorer" href="https://blockstream.info/"
+                                                target="_blank">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Blockstream Explorer</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            Search data from the Bitcoin and Liquid blockchains.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_explorer_solid.svg" />
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                        <li class="header_primary_navigation_item_sub-list_item crypto-gradBg"
+                                            id="primary_navigation_mining"> <a
+                                                class='product-subnav-grid-container_link ' data-nav-item="ice"
+                                                href="../cryptofeed/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Cryptocurrency Data Feed</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            Real-time and historical cryptocurrency trade data.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_datafeed_outline.svg" />
+                                                    </div>
+                                                </div>
+                                            </a> <a
+                                                class='product-subnav-grid-container_link_hover crypto-gradBg-hover '
+                                                data-nav-item="ice" href="../cryptofeed/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Cryptocurrency Data Feed</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            Real-time and historical cryptocurrency trade data.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_datafeed_solid.svg" />
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                        <li class="header_primary_navigation_item_sub-list_item lightning-gradBg"
+                                            id="primary_navigation_mining"> <a
+                                                class='product-subnav-grid-container_link ' data-nav-item="lightning"
+                                                href="../lightning/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Lightning Network</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            Our own implementation of the Lightning protocol.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_lightning_outline.svg" />
+                                                    </div>
+                                                </div>
+                                            </a> <a
+                                                class='product-subnav-grid-container_link_hover lightning-gradBg-hover '
+                                                data-nav-item="lightning" href="../lightning/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Lightning Network</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            Our own implementation of the Lightning protocol.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_lightning_solid.svg" />
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                        <li class="header_primary_navigation_item_sub-list_item elements-gradBg"
+                                            id="primary_navigation_block-explorer"> <a
+                                                class='product-subnav-grid-container_link ' data-nav-item="elements"
+                                                href="../elements/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Elements</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            An open-source, sidechain-capable blockchain platform.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_elements_outline.svg" />
+                                                    </div>
+                                                </div>
+                                            </a> <a
+                                                class='product-subnav-grid-container_link_hover elements-gradBg-hover '
+                                                data-nav-item="elements" href="../elements/index.html">
+                                                <div class="header_primary_navigation_item_sub-list_item_link">
+                                                    <div
+                                                        class="header_primary_navigation_item_sub-list_item_link_block">
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                            Elements</p>
+                                                        <p
+                                                            class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                            An open-source, sidechain-capable blockchain platform.</p>
+                                                    </div>
+                                                    <div class="product-subnav-grid-container_icon"> <img
+                                                            src="../../src/imgs/nav_icons/navigation_icons_elements_solid.svg" />
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                                <!--<li class="footer-header"><div class="product-nav-footer"><div class="product-nav-footer_hover"> <a href="https://help.blockstream.com/">Support</a> <a href="https://help.blockstream.com/">Support</a></div></div></li>-->
+                            </ul>
+                        </li>
+                        <li class="header_primary_navigation_item"> <a
+                                class='header_primary_navigation_item_link header_primary_navigation_dropdown-button'
+                                id="nav-dropdown-news" href="#" onclick="mobileNavDropdown(event)"> Newsroom <span>
+                                    <div class="arrow-icon">
+                                        <div class="arrow a-top"></div>
+                                        <div class="arrow a-bottom"></div>
+                                    </div>
+                                </span> </a>
+                            <ul class="header_primary_navigation_item_sub-list" id="primary_navigation_list_news">
+                                <li class="header_primary_navigation_item_sub-list_header">
+                                    <ul class="subnav-grid-container">
+                                        <li class="header_primary_navigation_item_sub-list_item"
+                                            id="primary_navigation_blog">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                        class='header_primary_navigation_item_sub-list_item_link_block_title blog-link'
+                                                        href="#" data-nav-item="blog" onclick="blogLinkClicked(event)">
+                                                        <i
+                                                            class="fal fa-edit header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Blog</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="header_primary_navigation_item_sub-list_item"
+                                            id="primary_navigation_press-newsroom">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                        class='header_primary_navigation_item_sub-list_item_link_block_title nav-link-active'
+                                                        href="index.html" data-nav-item="newsroom"> <i
+                                                            class="fal fa-newspaper header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>In
+                                                        The News</a></div>
+                                            </div>
+                                        </li>
+                                        <li class="header_primary_navigation_item_sub-list_item"
+                                            id="primary_navigation_press-release">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                        class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                        href="../press-releases/index.html"
+                                                        data-nav-item="press-release"> <i
+                                                            class="fal fa-list-alt header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Press
+                                                        Releases</a></div>
+                                            </div>
+                                        </li>
+                                        <li class="header_primary_navigation_item_sub-list_item"
+                                            id="primary_navigation_brand-assets">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                        class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                        href="../brand-assets/index.html" data-nav-item="brand-assets">
+                                                        <i
+                                                            class="fal fa-toolbox header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Brand
+                                                        Assets</a></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header_primary_navigation_item"> <a
+                                class='header_primary_navigation_item_link header_primary_navigation_dropdown-button'
+                                id="nav-dropdown-developer" href="#" onclick="mobileNavDropdown(event)"> Developers
+                                <span>
+                                    <div class="arrow-icon">
+                                        <div class="arrow a-top"></div>
+                                        <div class="arrow a-bottom"></div>
+                                    </div>
+                                </span> </a>
+                            <ul class="header_primary_navigation_item_sub-list" id="primary_navigation_list_developer">
+                                <li class="header_primary_navigation_item_sub-list_header">
+                                    <ul class="subnav-grid-container">
+                                        <li class="header_primary_navigation_item_sub-list_item"
+                                            id="primary_navigation_eng-blog">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                        class='header_primary_navigation_item_sub-list_item_link_block_title'
+                                                        href="https://medium.com/blockstream" target="blank"
+                                                        data-nav-item="eng-blog"> <i
+                                                            class="fal fa-cog header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Engineering
+                                                        Blog</a></div>
+                                            </div>
+                                        </li>
+                                        <li class="header_primary_navigation_item_sub-list_item"
+                                            id="primary_navigation_documentation">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                        class='header_primary_navigation_item_sub-list_item_link_block_title'
+                                                        href="https://docs.blockstream.com/" target="blank"
+                                                        data-nav-item="documentation"> <i
+                                                            class="fal fa-code header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Documentation</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header_primary_navigation_item"> <a
+                                class='header_primary_navigation_item_link header_primary_navigation_dropdown-button '
+                                id="nav-dropdown-about" href="#" onclick="mobileNavDropdown(event)"> Company <span>
+                                    <div class="arrow-icon">
+                                        <div class="arrow a-top"></div>
+                                        <div class="arrow a-bottom"></div>
+                                    </div>
+                                </span> </a>
+                            <ul class="header_primary_navigation_item_sub-list" id="primary_navigation_list_about">
+                                <li class="header_primary_navigation_item_sub-list_header">
+                                    <ul class="subnav-grid-container">
+                                        <li class="header_primary_navigation_item_sub-list_item"
+                                            id="primary_navigation_research">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                        class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                        href="../research/index.html" data-nav-item="research"> <i
+                                                            class="fal fa-book-open header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Research</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="header_primary_navigation_item_sub-list_item"
+                                            id="primary_navigation_about">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                        class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                        href="../about/index.html" data-nav-item="about"> <i
+                                                            class="fal fa-building header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>About</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="header_primary_navigation_item_sub-list_item"
+                                            id="primary_navigation_careers">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                        class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                        href="../careers/index.html" data-nav-item="careers"> <i
+                                                            class="fal fa-user header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Careers</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header_primary_navigation_item store-link"> <a
+                                class="header_primary_navigation_item_link "
+                                href="https://store.blockstream.com/">Store</a></li>
+                        <li class="header_primary_navigation_item store-link"> <a
+                                class="header_primary_navigation_item_link "
+                                href="https://help.blockstream.com/">Support</a></li>
+                        <li class="header_primary_navigation_item header_primary_navigation_item_no-line">
+                            <div class="language-button" id="language-selector"></div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="newsroom-header_secondary">
+            <div class="newsroom-header">
+                <div class="header-left"> <a
+                        href="https://finance.yahoo.com/news/btcpay-server-now-processing-blockstream-203356708.html">
+                        <img src="../../src/imgs/img/adam_back.jpg" width="100%" /> </a></div>
+                <div class="header-right">
+                    <div class="header-right-content">
+                        <p class="press-article-block_block_publication">Jan 15, 2020</p>
+                        <h4 class="press-article-block_block_title">BTCPay Server Now Processing Blockstream’s Liquid
+                            Assets</h4>
+                        <p class="press-article-block_block_text">Blockstream’s Liquid sidechain is now integrated with
+                            BTCPay Server, the self-hosted bitcoin payment processor.</p><a class="gradient-button"
+                            href="https://finance.yahoo.com/news/btcpay-server-now-processing-blockstream-203356708.html"
+                            target="_blank">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="newsroom-content">
+            <div class="press">
+                <div class="newsroom-subtitle">News</div>
+                <div class="press_articles newsroom-articles">
+                    <div class="press-article-block"> <a
+                            href="https://finance.yahoo.com/news/canadian-bitcoin-mining-firm-ramps-140014561.html"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Canadian Bitcoin mining firm ramps up capabilities as hashrate rises ..."
+                                style="background-image: url(../../src/imgs/news_images/canadian_bitcoin.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">September 20, 2019</div>
+                                <div class="press-article-block_block_title">Canadian Bitcoin mining firm ramps up
+                                    capabilities as hashrate rises ...</div>
+                                <div class="press-article-block_block_text">Canadian company Bitfarms has bought 2,500
+                                    A10 Avalon miners, to increase its mining capacity...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://finance.yahoo.com/news/blockstream-makes-bitcoin-mining-operations-140013921.html"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Blockstream makes its Bitcoin mining operations public"
+                                style="background-image: url(../../src/imgs/news_images/blockstream_makes.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">August 16, 2019</div>
+                                <div class="press-article-block_block_title">Blockstream makes its Bitcoin mining
+                                    operations public</div>
+                                <div class="press-article-block_block_text">Blockstream, the Canadian blockchain
+                                    services company well known for its work on the ...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://finance.yahoo.com/news/blockstream-developers-release-miniscript-coding-143357455.html"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Blockstream developers release Miniscript to make coding Bitcoin easier"
+                                style="background-image: url(../../src/imgs/news_images/blockstream_developers.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">August 26, 2019</div>
+                                <div class="press-article-block_block_title">Blockstream developers release Miniscript
+                                    to make coding Bitcoin easier</div>
+                                <div class="press-article-block_block_text">Developers at Blockstream Research think
+                                    they’ve found a way to make coding Bitcoin easier...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.forbes.com/sites/ktorpey/2019/08/08/blockstream-reveals-massive-bitcoin-mining-facilities-fidelity-an-early-customer/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Blockstream Reveals Massive Bitcoin Mining Facilities, Fidelity An Early Customer "
+                                style="background-image: url(../../src/imgs/news_images/blockstream_reveals.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Aug 8, 2019</div>
+                                <div class="press-article-block_block_title">Blockstream Reveals Massive Bitcoin Mining
+                                    Facilities, Fidelity An Early Customer</div>
+                                <div class="press-article-block_block_text">On Thursday, blockchain technology company
+                                    Blockstream revealed details related to their massive...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://thenextweb.com/hardfork/2019/07/10/shitposters-are-using-sophisticated-bitcoin-satellites-to-troll-each-other/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Shitposters are using sophisticated Bitcoin satellites to troll each other"
+                                style="background-image: url(../../src/imgs/news_images/shitposters.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">February 21, 2020</div>
+                                <div class="press-article-block_block_title">Shitposters are using sophisticated Bitcoin
+                                    satellites to troll each other</div>
+                                <div class="press-article-block_block_text">Since December, a sophisticated set of
+                                    satellites has beamed the entire Bitcoin...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a href="https://www.entrepreneur.com/article/335944"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="How Cryptocurrency Projects Are Tackling Transparency and Security Problems"
+                                style="background-image: url(../../src/imgs/news_images/how_cryptocurrency.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">June 27, 2019</div>
+                                <div class="press-article-block_block_title">How Cryptocurrency Projects Are Tackling
+                                    Transparency and Security Problems</div>
+                                <div class="press-article-block_block_text">I invested in BTC in 2010 (and sold shortly
+                                    after, but have bought and sold all along since then)...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.forbes.com/sites/ktorpey/2019/06/30/2-people-cited-in-the-bitcoin-white-paper-share-their-thoughts-on-cryptos-future/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="2 People Cited In The Bitcoin White Paper Share Their Thoughts On Crypto's Future"
+                                style="background-image: url(../../src/imgs/news_images/2_people.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Jun 30, 2019</div>
+                                <div class="press-article-block_block_title">2 People Cited In The Bitcoin White Paper
+                                    Share Their Thoughts On Crypto's Future</div>
+                                <div class="press-article-block_block_text">Most of the discussion around bitcoin last
+                                    week had to do with...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.wired.com/story/cypherpunks-bitcoin-ham-radio/" target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="The Cypherpunks Tapping Bitcoin via Ham Radio"
+                                style="background-image: url(../../src/imgs/news_images/the_cypherpunks.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Jun 27, 2019</div>
+                                <div class="press-article-block_block_title">The Cypherpunks Tapping Bitcoin via Ham
+                                    Radio</div>
+                                <div class="press-article-block_block_text">Every six hours, at his home in the high
+                                    desert outside Kingman, Arizona, midway between Phoenix and Las Vegas...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://finance.yahoo.com/news/why-schnorr-signatures-important-privacy-160018577.html"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Why Schnorr Signatures are important for privacy"
+                                style="background-image: url(../../src/imgs/news_images/why_schnorr.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">May 24, 2019</div>
+                                <div class="press-article-block_block_title">Why Schnorr Signatures are important for
+                                    privacy</div>
+                                <div class="press-article-block_block_text">Whilst much of Bitcoin’s development has
+                                    recently been focused on the Lightning Network...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a href="https://techcrunch.com/2019/05/14/bitcoin-shrug-emoji/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Bitcoin has surged above $8,000 and theories around why abound"
+                                style="background-image: url(../../src/imgs/news_images/bitcoin_has_surged.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">May 14, 2019</div>
+                                <div class="press-article-block_block_title">Bitcoin has surged above $8,000 and
+                                    theories around why abound</div>
+                                <div class="press-article-block_block_text">Bitcoin is now trading at around $8,130, up
+                                    a whopping 60.84% over the past month, with the price surging $3,086.14 over the
+                                    period...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://news.yahoo.com/sacrilegious-binance-reorg-erode-bitcoin-092505964.html"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Sacrilegious Binance Reorg Would ‘Erode’ Bitcoin: Blockstream"
+                                style="background-image: url(../../src/imgs/news_images/sacrilegious_binance.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">May 15, 2019</div>
+                                <div class="press-article-block_block_title">Sacrilegious Binance Reorg Would ‘Erode’
+                                    Bitcoin: Blockstream</div>
+                                <div class="press-article-block_block_text">Blockstream CEO Adam Back told the What
+                                    Bitcoin Did podcast that the block reshuffling proposed by Binance CEO Changpeng
+                                    Zhao ...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.engadget.com/2019/02/28/htc-exodus-blockchain-smartphone-interview/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="HTC's Exodus smartphone is about much more than Bitcoin"
+                                style="background-image: url(../../src/imgs/news_images/htc_exodus.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">February 28, 2019</div>
+                                <div class="press-article-block_block_title">HTC's Exodus smartphone is about much more
+                                    than Bitcoin</div>
+                                <div class="press-article-block_block_text">'A blockchain phone? But why?' ...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.forbes.com/sites/ktorpey/2019/02/27/its-2019-where-are-bitcoins-sidechains/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="It's 2019, Where Are Bitcoin's Sidechains?"
+                                style="background-image: url(../../src/imgs/news_images/its_2019.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">February 27, 2019</div>
+                                <div class="press-article-block_block_title">It's 2019, Where Are Bitcoin's Sidechains?
+                                </div>
+                                <div class="press-article-block_block_text">Back in 2014, a white paper co-authored by
+                                    many of the individuals who co-founded Blockstream ...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="http://www.ejinsight.com/20190108-ice-owned-crypto-startup-bakkt-gets-li-ka-shing-on-board/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="ICE-owned crypto startup Bakkt gets Li Ka-shing on board"
+                                style="background-image: url(../../src/imgs/news_images/ice_owned.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Jan 8, 2019</div>
+                                <div class="press-article-block_block_title">ICE-owned crypto startup Bakkt gets Li
+                                    Ka-shing on board</div>
+                                <div class="press-article-block_block_text">Hong Kong billionaire Li Ka-shing has joined
+                                    other tech and venture capital heavyweights in supporting cryptocurrency venture
+                                    Bakkt ...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.timescolonist.com/business/on-the-street-shared-office-spaces-opening-developer-joins-b-c-ferries-board-1.23616777"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="On the Street: Shared office spaces opening; developer joins B.C. Ferries board"
+                                style="background-image: url(../../src/imgs/news_images/on_the_street.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Jan 30, 2019</div>
+                                <div class="press-article-block_block_title">On the Street: Shared office spaces
+                                    opening; developer joins B.C. Ferries board</div>
+                                <div class="press-article-block_block_text">Real estate agents Kirsten Marten and Mark
+                                    Rice have acquired Coldwell Banker Slegg Realty ...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.wired.com/story/bitcoin-exposed-silicon-valley-aim-making-money/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Bitcoin Exposed Silicon Valley's Ultimate Aim: Making Money"
+                                style="background-image: url(../../src/imgs/news_images/bitcoin_exposed_silicon.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Jan 07, 2019</div>
+                                <div class="press-article-block_block_title">Bitcoin Exposed Silicon Valley's Ultimate
+                                    Aim: Making Money</div>
+                                <div class="press-article-block_block_text">Bitcoin turned 10 this month, and what a
+                                    ride it’s been—initial obscurity; the kind of exponential price spike...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://techcrunch.com/2019/01/21/digital-garage-teams-up-with-blockstream-to-develop-blockchain-financial-services-in-japan/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Digital Garage teams up with Blockstream to develop blockchain financial services in Japan"
+                                style="background-image: url(../../src/imgs/news_images/digital_garage.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Jan 21, 2019</div>
+                                <div class="press-article-block_block_title">Digital Garage teams up with Blockstream to
+                                    develop blockchain financial services in Japan</div>
+                                <div class="press-article-block_block_text">The global crypto market may have tanked
+                                    last year, but notable names have joined...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.independent.co.uk/life-style/gadgets-and-tech/news/bitcoin-price-collapse-cryptocurrency-latest-value-prediction-analysis-a8675766.html"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Bitcoin price collapse set to continue, cyptocurrency analysts warn"
+                                style="background-image: url(../../src/imgs/news_images/bitcoin_price.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Dec 10, 2018</div>
+                                <div class="press-article-block_block_title">Bitcoin price collapse set to continue,
+                                    cyptocurrency analysts warn</div>
+                                <div class="press-article-block_block_text">Bitcoin has experienced a modest price
+                                    recovery following weeks of heavy losses...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.forbes.com/sites/michaeldelcastillo/2018/12/17/who-needs-verizon-blockstream-broadcasts-entire-bitcoin-blockchain-from-space/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Who Needs Verizon? Blockstream Broadcasts Entire Bitcoin Blockchain From Space"
+                                style="background-image: url(../../src/imgs/news_images/who_needs_verizon.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Dec 17, 2018</div>
+                                <div class="press-article-block_block_title">Who Needs Verizon? Blockstream Broadcasts
+                                    Entire Bitcoin Blockchain From Space</div>
+                                <div class="press-article-block_block_text">A new age of bitcoin is about to begin, as
+                                    users around the world will no longer need internet access...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.independent.co.uk/life-style/gadgets-and-tech/news/bitcoin-price-prediction-2019-cryptocurrency-forecast-cost-analysis-a8644266.html"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Bitcoin price just hit new 2018 low but cryptocurrency analysts predict dramatic market reversal"
+                                style="background-image: url(../../src/imgs/news_images/bitcoin_price_just_hit.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Nov 21, 2018</div>
+                                <div class="press-article-block_block_title">Bitcoin price just hit new 2018 low but
+                                    cryptocurrency analysts predict dramatic market reversal</div>
+                                <div class="press-article-block_block_text">Bitcoin has fallen to its lowest price since
+                                    October 2017, marking the latest...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.forbes.com/sites/francescoppola/2018/10/11/blockstreams-new-solution-to-bitcoins-liquidity-problem-looks-oddly-familiar/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Blockstream's New Solution To Bitcoin's Liquidity Problem Looks Oddly Familiar"
+                                style="background-image: url(../../src/imgs/news_images/blockstreams_new_solution.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Oct 11, 2018</div>
+                                <div class="press-article-block_block_title">Blockstream's New Solution To Bitcoin's
+                                    Liquidity Problem Looks Oddly Familiar</div>
+                                <div class="press-article-block_block_text">Bitcoin is illiquid. Proof of work is
+                                    appallingly slow and expensive...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://thenextweb.com/hardfork/2018/09/05/bitmain-bitcoin-mining-asicboost/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Bitmain’s AntPool quietly activates controversial hack for faster Bitcoin mining"
+                                style="background-image: url(../../src/imgs/news_images/bitmains_antpool.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Sep 5, 2018</div>
+                                <div class="press-article-block_block_title">Bitmain’s AntPool quietly activates
+                                    controversial hack for faster Bitcoin mining</div>
+                                <div class="press-article-block_block_text">It looks like one of Bitcoin’s premier
+                                    mining pools, AntPool, has activated AsicBoost on its mining operations...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.dr.dk/nyheder/penge/bitcoin-har-faet-bank-fald-pa-70-procent"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Bitcoin har fået bank: Fald på 70 procent"
+                                style="background-image: url(../../src/imgs/news_images/bitcoin_har.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Aug 14, 2018</div>
+                                <div class="press-article-block_block_title">Bitcoin har fået bank: Fald på 70 procent
+                                </div>
+                                <div class="press-article-block_block_text">Efter en vinter, hvor kryptomanien hærgede
+                                    og nyslåede...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a href="https://fortune.com/2018/08/14/bitcoin-price-usd-today/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="‘They Sense Panic:’ Why the Price of Bitcoin Is Tanking"
+                                style="background-image: url(../../src/imgs/news_images/they_sense_panic.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Aug 14, 2018</div>
+                                <div class="press-article-block_block_title">‘They Sense Panic:’ Why the Price of
+                                    Bitcoin Is Tanking</div>
+                                <div class="press-article-block_block_text">Bitcoin dropped below $6,000 and dozens of
+                                    smaller digital tokens tumbled as this month’s ...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://finance.yahoo.com/news/apos-sense-panic-apos-why-091938621.html?guccounter=1&amp;guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;guce_referrer_sig=AQAAAI_DjH8llJQEC0nyjndJpvcRTv9fFMkqn4Wuc18oA3B756v51j38gg5pP3mNB9I5OxCT4HJPO-ZDXklX-gx7pWt7RRHpBFU-j5tq15kGf_ZvMPWzhl363udYQPXVDrwLQgxzcDKmUqQCmgFcuDmHyCnHzB2DvEHW9W-KxLwMjfDA"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="‘They Sense Panic:’ Why the Price of Bitcoin Is Tanking"
+                                style="background-image: url(../../src/imgs/news_images/sense_panic.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Aug 14, 2018</div>
+                                <div class="press-article-block_block_title">‘They Sense Panic:’ Why the Price of
+                                    Bitcoin Is Tanking</div>
+                                <div class="press-article-block_block_text">Bitcoin dropped below $6,000 and dozens of
+                                    smaller digital tokens tumbled as this month’s selloff in cryptocurrencies showed
+                                    few signs of letting up...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.businessinsider.co.za/tesla-is-making-a-mini-car-says-elon-musk-on-twitter-2018-8"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Tesla is making a mini car that can fit an adult, says Elon Musk"
+                                style="background-image: url(../../src/imgs/news_images/tesla_is_making.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Aug 06, 2018</div>
+                                <div class="press-article-block_block_title">Tesla is making a mini car that can fit an
+                                    adult, says Elon Musk</div>
+                                <div class="press-article-block_block_text">Tesla CEO Elon Musk said on Sunday that the
+                                    company is making a mini car that can fit an adult...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://techcrunch.com/2018/07/24/mosaic-ventures-is-looking-to-raise-150m-second-fund/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Mosaic Ventures is looking to raise $150M second fund"
+                                style="background-image: url(../../src/imgs/news_images/mosaic_ventures.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">July 24, 2018</div>
+                                <div class="press-article-block_block_title">Mosaic Ventures is looking to raise $150M
+                                    second fund</div>
+                                <div class="press-article-block_block_text">UK based, Europe focused early stage VC firm
+                                    Mosaic Ventures...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://retina.elpais.com/retina/2018/06/27/innovacion/1530096818_489633.html"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Cadena de bloques Cinco mitos de ‘blockchain’ que debes conocer para entender su presente"
+                                style="background-image: url(../../src/imgs/news_images/cadena_de.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">July 1, 2018</div>
+                                <div class="press-article-block_block_title">Cadena de bloques Cinco mitos de
+                                    ‘blockchain’ que debes conocer para entender su presente</div>
+                                <div class="press-article-block_block_text">Hasta principios de 2017, blockchain...
+                                </div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.morningstar.com/articles/868176/how-is-blockchain-used" target="_blank">
+                            <div class="press-article-block_image-container" role="How Is Blockchain Used?"
+                                style="background-image: url(../../src/imgs/news_images/company_banner.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">June 4, 2018</div>
+                                <div class="press-article-block_block_title">How Is Blockchain Used?</div>
+                                <div class="press-article-block_block_text">In this second article of our blockchain
+                                    series, we look at where the investment activity...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.newsbtc.com/2018/06/26/bitcoins-lightning-network-capacity-issues-remain-pressing-problem/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Bitcoin’s Lightning Network Capacity Problems Addressed with New Client"
+                                style="background-image: url(../../src/imgs/news_images/bitcoin_lightning.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">June 4, 2018</div>
+                                <div class="press-article-block_block_title">Bitcoin’s Lightning Network Capacity
+                                    Problems Addressed with New Client</div>
+                                <div class="press-article-block_block_text">Bitcoin’s Lightning Network is considered to
+                                    be a major development...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.thestreet.com/opinion/cryptocurrency-backed-by-institutional-money-from-ice-goldman-14606026"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Cryptocurrency Looks More Legit Now Backed by Institutional Money, ICE, Goldman"
+                                style="background-image: url(../../src/imgs/news_images/cryptocurrency_looks.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">June 11, 2018</div>
+                                <div class="press-article-block_block_title">Cryptocurrency Looks More Legit Now Backed
+                                    by Institutional Money, ICE, Goldman</div>
+                                <div class="press-article-block_block_text">Decentralization and a lack of clear
+                                    regulations have played a significant role in the ups and downs of cryptocurrency...
+                                </div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.inc.com/jemima-mcevoy/these-are-top-10-tech-companies-to-watch-in-2018.html"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Blockchain, AI, Cybersecurity: Industries Hatching the Hottest Startups"
+                                style="background-image: url(../../src/imgs/news_images/blockchain_ai.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">June 13, 2018</div>
+                                <div class="press-article-block_block_title">Blockchain, AI, Cybersecurity: Industries
+                                    Hatching the Hottest Startups</div>
+                                <div class="press-article-block_block_text">These companies are predicted to turn
+                                    ripples into waves in 2018...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://thenextweb.com/hardfork/2018/05/15/app-trade-bitcoin-without-internet/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="This app lets you trade Bitcoin without an internet connection – but there’s a catch"
+                                style="background-image: url(../../src/imgs/news_images/this_app_lets.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">May 15, 2018</div>
+                                <div class="press-article-block_block_title">This app lets you trade Bitcoin without an
+                                    internet connection – but there’s a catch</div>
+                                <div class="press-article-block_block_text">If you’re a cryptocurrency trader and often
+                                    find often find yourself dealing with a spotty...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.ccn.com/bloomberg-inks-deal-with-novogratz-founded-galaxy-digital-to-launch-cryptocurrency-price-index/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Bloomberg, Billionaire Bull Novogratz Partner to Launch Cryptocurrency Price Index"
+                                style="background-image: url(../../src/imgs/news_images/bloomberg_billionaire.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">May 09, 2018</div>
+                                <div class="press-article-block_block_title">Bloomberg, Billionaire Bull Novogratz
+                                    Partner to Launch Cryptocurrency Price Index</div>
+                                <div class="press-article-block_block_text">One of bitcoin’s biggest bulls has inked a
+                                    deal with an unlikely partner...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.investopedia.com/news/mining-bitcoin-21-miles-above-earth/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Mining Bitcoin From 21 Miles Above the Earth"
+                                style="background-image: url(../../src/imgs/news_images/company_banner.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">May 03, 2018</div>
+                                <div class="press-article-block_block_title">Mining Bitcoin From 21 Miles Above the
+                                    Earth</div>
+                                <div class="press-article-block_block_text">Bitcoin is reaching for the stars,
+                                    literally! Though the most popular cryptocurrency has had...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a href="http://www.koreaherald.com/view.php?ud=20180430000575"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="[Herald Interview] Blockstream CSO urges crypto caution"
+                                style="background-image: url(../../src/imgs/news_images/herald_interview.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Apr 30, 2018</div>
+                                <div class="press-article-block_block_title">[Herald Interview] Blockstream CSO urges
+                                    crypto caution</div>
+                                <div class="press-article-block_block_text">Overly-hyped sentiments have begun to give
+                                    way to skepticism toward a flurry...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.techzone360.com/topics/techzone/articles/2018/04/10/437785-blockcha-space.htm"
+                            target="_blank">
+                            <div class="press-article-block_image-container" role="Blockchain in Space"
+                                style="background-image: url(../../src/imgs/news_images/blockchain_inspace.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Apr 10, 2018</div>
+                                <div class="press-article-block_block_title">Blockchain in Space</div>
+                                <div class="press-article-block_block_text">Yes, we’re talking about taking Blockchain
+                                    where no distributed ledger has gone before...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://gestion.pe/tecnologia/tecnologia-facilitar-pagos-bitcoin-comienza-funcionar-229480-noticia/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Tecnología para facilitar pagos de bitcoin comienza a funcionar"
+                                style="background-image: url(../../src/imgs/news_images/tecnologia.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Mar 16, 2018</div>
+                                <div class="press-article-block_block_title">Tecnología para facilitar pagos de bitcoin
+                                    comienza a funcionar</div>
+                                <div class="press-article-block_block_text">Una versión de la tecnología diseñada para
+                                    hacer que los pagos de criptomonedas sean...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://fortune.com/2018/03/15/bitcoin-lightning-network-technology/" target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Technology Meant to Make Bitcoin Money Again Just Went Live"
+                                style="background-image: url(../../src/imgs/news_images/technology_meant.png);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Mar 15, 2018</div>
+                                <div class="press-article-block_block_title">Technology Meant to Make Bitcoin Money
+                                    Again Just Went Live</div>
+                                <div class="press-article-block_block_text">The software, called Lightning Network, can
+                                    now be used for Bitcoin...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://arstechnica.com/tech-policy/2018/02/bitcoins-lightning-network-a-deep-dive/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="Bitcoin has a huge scaling problem—Lightning could be the solution"
+                                style="background-image: url(../../src/imgs/news_images/bitcoin_has_a_huge_scalling.jpg);">
+                            </div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Feb 04, 2018</div>
+                                <div class="press-article-block_block_title">Bitcoin has a huge scaling
+                                    problem—Lightning could be the solution</div>
+                                <div class="press-article-block_block_text">The Lightning network could enable much
+                                    cheaper and faster bitcoin payments...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.cnbc.com/2018/01/29/after-500-million-japan-cryptocurrency-theft-heres-how-to-keep-yours-secure.html"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="After $500 million Japan cryptocurrency theft, here’s how to keep yours secure"
+                                style="background-image: url(../../src/imgs/news_images/million_japan.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Jan 29, 2018</div>
+                                <div class="press-article-block_block_title">After $500 million Japan cryptocurrency
+                                    theft, here’s how to keep yours secure</div>
+                                <div class="press-article-block_block_text">Hackers stole more than half a billion
+                                    dollars in cryptocurrencies from...</div>
+                            </div>
+                        </a></div>
+                    <div class="press-article-block"> <a
+                            href="https://www.wired.com/story/the-lightning-network-could-make-bitcoin-faster-and-cheaper/"
+                            target="_blank">
+                            <div class="press-article-block_image-container"
+                                role="The Lightning Network Could Make Bitcoin Faster—and Cheaper"
+                                style="background-image: url(../../src/imgs/news_images/the_lightning_network.jpg);"></div>
+                            <div class="press-article-block_block">
+                                <div class="press-article-block_block_publication">Jan 19, 2018</div>
+                                <div class="press-article-block_block_title">The Lightning Network Could Make Bitcoin
+                                    Faster—and Cheaper</div>
+                                <div class="press-article-block_block_text">In 2014, Joseph Poon and Thaddeus Dryja were
+                                    bitcoin-obsessed engineers...</div>
+                            </div>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="social-mobile">
+                <div class="social-links"> <a href="https://twitter.com/Blockstream" target="_blank"> <i
+                            class="fab fa-twitter"></i> </a> <a href="https://ca.linkedin.com/company/blockstream"
+                        target="_blank"> <i class="fab fa-linkedin-in"></i> </a> <a
+                        href="https://www.facebook.com/Blockstream/" target="_blank"> <i class="fab fa-facebook-f"></i>
+                    </a> <a href="https://github.com/Blockstream" target="_blank"> <i class="fab fa-github"></i> </a> <a
+                        href="https://www.youtube.com/channel/UCZNt3fZazX9cwWcC9vjDJ4Q" target="_blank"> <i
+                            class="fab fa-youtube"></i> </a></div>
+            </div>
+            <div id="footer">
+                <div class="footer-sitemap">
+                    <div class="footer-sitemap_logo-grid"> <img src="../../src/imgs/icons/BLKS_LOGO.svg" alt="Blockstream">
+                        <div class="social-desktop">
+                            <div class="social-links"> <a href="https://twitter.com/Blockstream" target="_blank"> <i
+                                        class="fab fa-twitter"></i> </a> <a
+                                    href="https://ca.linkedin.com/company/blockstream" target="_blank"> <i
+                                        class="fab fa-linkedin-in"></i> </a> <a
+                                    href="https://www.facebook.com/Blockstream/" target="_blank"> <i
+                                        class="fab fa-facebook-f"></i> </a> <a href="https://github.com/Blockstream"
+                                    target="_blank"> <i class="fab fa-github"></i> </a> <a
+                                    href="https://www.youtube.com/channel/UCZNt3fZazX9cwWcC9vjDJ4Q" target="_blank"> <i
+                                        class="fab fa-youtube"></i> </a></div>
+                        </div>
+                        <div class="footer-sitemap_logo-grid_terms_privacy">
+                            <ul>
+                                <li> <a href="../terms/index.html">Terms</a></li>
+                                <li> <a href="../privacy/index.html">Privacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-sitemap_logo-grid_copyright">
+                            <script type="text/javascript">
+                                document.write("&copy; " + new Date().getFullYear());
+                            </script> Blockstream Corporation Inc. All rights reserved.
+                        </div>
+                    </div>
+                    <div class="footer-sitemap_sitelinks">
+                        <div class="footer-sitemap_products">
+                            <h4 class="footer-title">Products</h4>
+                            <div class="footer-sitemap_products_twoColGrid collapse">
+                                <ul>
+                                    <li> <a href="../liquid/index.html">Liquid Network</a></li>
+                                    <li> <a href="../aqua/index.html">AQUA Wallet</a></li>
+                                    <li> <a href="../amp/index.html">Blockstream AMP</a></li>
+                                    <li> <a href="../green/index.html">Blockstream Green</a></li>
+                                    <li> <a href="../mining/index.html">Blockstream Mining</a></li>
+                                </ul>
+                                <ul>
+                                    <li> <a href="../satellite/index.html">Blockstream Satellite</a></li>
+                                    <li> <a href="https://blockstream.info/" target="_blank">Blockstream Explorer</a>
+                                    </li>
+                                    <li> <a href="../cryptofeed/index.html">Cryptocurrency Data Feed</a></li>
+                                    <li> <a href="../lightning/index.html">Lightning Network</a></li>
+                                    <li> <a href="../elements/index.html">Elements</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-sitemap_otherlinks">
+                            <div>
+                                <h4 class="footer-title">Developers</h4>
+                                <ul class="collapse">
+                                    <li> <a href="https://medium.com/blockstream" target="_blank">Engineering Blog</a>
+                                    </li>
+                                    <li> <a href="https://docs.blockstream.com/" target="_blank">Documentation</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="footer-title">Company</h4>
+                                <ul class="collapse">
+                                    <li> <a href="../research/index.html">Research</a></li>
+                                    <li> <a href="../about/index.html">About</a></li>
+                                    <li> <a href="../careers/index.html">Careers</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="footer-title">Resources</h4>
+                                <ul class="collapse">
+                                    <li> <a href="https://help.blockstream.com/">Support</a></li>
+                                    <li> <a href="../contact/index.html">Contact</a></li>
+                                    <li> <a href="../brand-assets/index.html">Brand Assets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><a id="back-to-top"></a>
+        </footer>
+    </div><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128212180-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-128212180-1');
+    </script>
+</body>
+<!-- Mirrored from blockstream.com/newsroom/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Nov 2020 08:43:08 GMT -->
+
+</html>

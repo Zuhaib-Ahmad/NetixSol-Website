@@ -1,0 +1,2068 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../src/css/styles8c7a.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="../../src/imgs/img/favicon_new.png"> <!-- font awesome -->
+    <link href="../../src/others/assets/font-awesome/css/all.min.css" rel="stylesheet"> <!-- rss feed -->
+    <link rel="alternate" type="application/rss+xml" title="Blockstream: Bitcoin & digital asset infrastructure"
+        href="../../src/others/feed.xml"> <!-- needs to load before dom so author name gets formatted -->
+    <script type="text/javascript" src="../../src/others/assets/js/utility-scripts/blog-author.js"></script>
+    <script type="text/javascript" src="../../src/others/assets/js/header_backdrop.js" defer></script>
+    <script src="../../src/js/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../src/others/assets/unpkg/axios@0.21.0/dist/axios.min.js" defer></script>
+    <script type="text/javascript" src="../../src/others/assets/js/utility-scripts/blog-language-selection.js" defer></script>
+    <!-- landing page -->
+    <script type="text/javascript" src="../../src/others/assets/js/utility-scripts/resource-cycling.js" defer></script>
+    <script type="text/javascript" src="../../src/others/assets/js/navigationedce.js?v=1.101" defer></script>
+    <script type="text/javascript" src="../../src/others/assets/js/fly-in.js" async></script>
+    <script type="text/javascript" src="../../src/others/assets/js/facebook-sdk.js" async></script>
+    <script type="text/javascript" src="../../src/others/assets/js/formSubmission.js" async></script>
+    <script type="text/javascript" src="../../src/others/assets/js/back-to-top.js" defer></script>
+    <script type="text/javascript" src="../../src/others/assets/js/liquid/members-popup.js" async></script>
+    <script type="text/javascript" src="../../src/others/assets/js/utility-scripts/modals.js" defer></script> <!-- transifex -->
+    <script type="text/javascript">
+        window.liveSettings = {
+            api_key: "de04b1185f2b4c2faf732d4994f9a7d6"
+        }
+    </script>
+    <script type="text/javascript" src="../../src/others/transifex/live.js" defer></script>
+    <script type="text/javascript" src="../../src/others/assets/js/utility-scripts/language-selector.js" defer></script>
+    <!-- analytics tracking code -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136091963-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-136091963-1');
+    </script> <!-- hotjar tracking code -->
+    <!-- Hotjar Tracking Code for www.blockstream.com -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 1351588,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script> <!-- meta data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:url" content="https://blockstream.com/liquid/" />
+    <meta property="og:site_name" content="Blockstream: Bitcoin and digital asset infrastructure" />
+    <meta content="Blockstream: Bitcoin and digital asset infrastructure" />
+    <title>AQUA: Sidechain for traders | Blockstream</title>
+    <meta property="og:title" content="Liquid Network: Sidechain for traders | Blockstream">
+    <meta name="twitter:title" content="Liquid Network: Sidechain for traders | Blockstream" />
+    <meta property="og:description"
+        content="A sidechain-based settlement network for traders and exchanges, enabling faster, more confidential Bitcoin transactions, and the issuance of digital assets.">
+    <meta name="twitter:description"
+        content="A sidechain-based settlement network for traders and exchanges, enabling faster, more confidential Bitcoin transactions, and the issuance of digital assets.">
+    <meta name="description"
+        content="A sidechain-based settlement network for traders and exchanges, enabling faster, more confidential Bitcoin transactions, and the issuance of digital assets.">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website" /> <!-- sets meta image to be used for social shares -->
+    <meta property="og:image" content="https://blockstream.com/img/img/blog_placeholders_liquid_network.jpg" />
+    <meta name="twitter:image" content="https://blockstream.com/img/img/blog_placeholders_liquid_network.jpg" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header-new_backdrop header-new_backdrop_aqua" id="header-backdrop" data-page="aqua"> <svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 763">
+                <defs>
+                    <linearGradient id="l0dgyewkea" x1="0%" x2="100%" y1="50.001%" y2="50.001%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="m5yofb8k0b" x1="0%" x2="100%" y1="49.999%" y2="49.999%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="hggzjo799c" x1="-.005%" x2="100%" y1="50.005%" y2="50.005%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="ay2gyf0btd" x1="0%" x2="100%" y1="50.002%" y2="50.002%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="5kuzmddv9e" x1="0%" x2="100%" y1="49.997%" y2="49.997%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="ig7yhqzwif" x1=".001%" x2="100.001%" y1="49.998%" y2="49.998%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="fodpqbc0rg" x1="0%" x2="101%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="s9s3cig6zh" x1="19%" x2="81%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="hq52k2uhii" x1="0%" x2="100%" y1="49.5%" y2="49.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="wukbnu1jyj" x1="0%" x2="104%" y1="49.5%" y2="49.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="j406oto2zk" x1="0%" x2="100%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="lqwqe3zmil" x1="0%" x2="100%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="6h08mrqf7m" x1="15.5%" x2="84.5%" y1="50.5%" y2="50.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="vma7q71lpn" x1="0%" x2="100%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="xhioytwiro" x1="-1.775%" x2="98.225%" y1="50.5%" y2="50.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="4fn561x9jp" x1="-1.361%" x2="98.639%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="hhq2725niq" x1="0%" x2="100%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="gqzwmupjzr" x1="0%" x2="100%" y1="50.005%" y2="50.005%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="wgt99szqxs" x1="0%" x2="100%" y1="47.5%" y2="47.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="0nadk2wlet" x1="0%" x2="100%" y1="49.5%" y2="49.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="45z70yap4u" x1="0%" x2="100%" y1="49%" y2="49%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="6optwmnuav" x1="0%" x2="100%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="tt9plwvtmw" x1="0%" x2="100%" y1="50.5%" y2="50.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="uj7z6uwklx" x1="0%" x2="100%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="izphwj844y" x1="0%" x2="100%" y1="49.5%" y2="49.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="qupq8zzcmz" x1="0%" x2="100%" y1="49.5%" y2="49.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="kpdev5wxdA" x1="0%" x2="100%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="9c518d6aoB" x1="0%" x2="100%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="574piy4psC" x1="0%" x2="100%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="4gnmxij10D" x1="0%" x2="100%" y1="50.5%" y2="50.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="7kztgev6dE" x1="0%" x2="100%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="4f1ubx913F" x1="0%" x2="100%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="ese026xlwG" x1="0%" x2="100%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="vszns4ejnH" x1="0%" x2="100%" y1="47.5%" y2="47.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="paq6vpgalI" x1="0%" x2="100%" y1="49.5%" y2="49.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="s570xpkq0J" x1="0%" x2="100%" y1="49.5%" y2="49.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="abt9q97rrK" x1="0%" x2="100%" y1="50.5%" y2="50.5%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="1y2tcf7r7L" x1="-.003%" x2="100%" y1="49.998%" y2="49.998%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="0tg73k7t5M" x1="-.003%" x2="100.002%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="uv7o21mxnN" x1="0%" x2="100%" y1="50.001%" y2="50.001%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="ugx1su1sdO" x1="0%" x2="99.997%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                    <linearGradient id="6orbk47srP" x1=".002%" x2="100%" y1="50%" y2="50%">
+                        <stop offset="0%" stop-color="#13CDC2" />
+                        <stop offset="32%" stop-color="#00647A" />
+                        <stop offset="40%" stop-color="#01697E" />
+                        <stop offset="49%" stop-color="#047888" />
+                        <stop offset="59%" stop-color="#089199" />
+                        <stop offset="70%" stop-color="#0EB3B0" />
+                        <stop offset="77%" stop-color="#13CDC2" />
+                        <stop offset="78%" stop-color="#12C6BD" />
+                        <stop offset="85%" stop-color="#0A989D" />
+                        <stop offset="91%" stop-color="#057786" />
+                        <stop offset="97%" stop-color="#016378" />
+                        <stop offset="100%" stop-color="#005C73" />
+                    </linearGradient>
+                </defs>
+                <g fill="none">
+                    <path fill="url(#l0dgyewkea)"
+                        d="M1104.882 185.603l366.59 89.168.112-.476-366.59-89.169c-130.069-31.655-270.064 1.318-356.705 84.032-63.544 60.685-157.465 95.501-257.673 95.501-49.086.16-97.803-8.465-143.848-25.463L8.375 213.468l-.172.456 338.423 125.728c139.285 51.748 304.608 22.9 402.048-70.12 86.47-82.612 226.292-115.513 356.208-83.93z" />
+                    <path fill="url(#m5yofb8k0b)"
+                        d="M752.994 259.319l-17.237 40.095-.234.243c-61.79 65.62-153.267 100.68-246.915 100.69-53.955.112-107.27-11.672-156.147-34.512L7.584 217.5l-.203.435L332.26 366.311c137.196 64.576 307.021 36.58 403.863-66.573l17.237-40.085.233-.243c85.171-90.06 228.978-124.005 357.698-84.467l371.884 119.922.142-.456-371.864-119.963c-129.034-39.63-273.125-5.532-358.458 84.873z" />
+                    <path fill="url(#hggzjo799c)"
+                        d="M758.215 249.56c83.935-97.78 231.788-132.88 359.534-85.358l377.115 150.695.173-.425-377.126-150.696c-128.02-47.624-276.208-12.392-360.243 85.714l-34.413 80.18-.162.193c-28.32 33.266-65.663 60.473-108.016 78.692-42.002 17.853-87.182 27.042-132.826 27.014-58.464 0-115.204-14.885-164.096-43.045L6.875 221.493l-.224.395 311.28 171.032c132.634 76.401 310.835 48.728 405.71-62.986l34.412-80.17.162-.203z" />
+                    <path fill="url(#ay2gyf0btd)"
+                        d="M762.342 239.661l-51.64 120.287-.111.152c-27.907 35.747-63.92 64.351-105.065 83.453-40.675 18.82-84.962 28.563-129.785 28.555-62.154 0-121.602-18.24-171.903-52.863L6.013 225.515l-.223.355 297.774 193.72c130.16 89.492 312.953 62.823 407.503-59.4l51.63-120.286.122-.162c82.626-105.503 234.606-141.768 361.389-86.24l382.347 181.478.183-.385-382.358-181.478c-127.026-55.64-279.32-19.253-362.038 86.544z" />
+                    <path fill="url(#5kuzmddv9e)"
+                        d="M766.925 230.015l-68.674 160.098v.07c-44.117 62.145-113.815 103.963-191.28 114.714-13.23 1.835-26.572 2.756-39.93 2.756-65.074 0-128.131-21.917-177.54-61.739L5.242 229.437l-.274.355 284.269 216.487c5.323 4.296 10.86 8.42 16.446 12.26 28.924 19.874 61.333 34.13 95.534 42.021 34.671 8.099 70.542 9.723 105.805 4.793 77.566-10.76 147.396-52.69 191.635-115.078l68.674-160.098v-.061c81.338-113.366 237.485-150.877 363.336-87.243l387.579 212.322.213-.395-387.59-212.373c-126.002-63.665-282.463-26.021-363.944 87.588z" />
+                    <path fill="url(#ig7yhqzwif)"
+                        d="M274.9 472.918c9.502 8.861 19.645 17.01 30.347 24.38 53.688 36.944 119.442 52.913 185.186 44.888 80.02-9.62 151.663-54.177 195.64-121.675l85.892-200.163c79.939-121.036 240.304-159.764 365.15-88.155l392.791 243.187.223-.355-392.8-243.187c-124.98-71.77-285.618-32.952-365.72 88.307l-85.86 200.123c-43.902 67.41-115.447 111.905-195.356 121.492-11.031 1.348-22.134 2.025-33.247 2.027-68.097 0-132.715-25.271-181.962-71.173L4.46 233.37l-.273.314L274.9 472.918z" />
+                    <path fill="url(#gqzwmupjzr)"
+                        d="M966.469 83.504c1.531-.233 3.042-.445 4.593-.648l2.18-.274c1.531-.192 3.042-.364 4.603-.527.69-.08 1.39-.141 2.09-.212 1.57-.152 3.152-.304 4.724-.426l1.703-.122c6.267-.456 12.523-.709 18.769-.709 49.13-.004 97.214 14.184 138.463 40.856l398.003 274.051.233-.354-398.002-274.042-3.042-1.925-1.136-.71c-1.014-.648-2.119-1.296-3.184-1.925l-1.44-.85c-3.44-2.027-6.911-3.966-10.413-5.817l-1.46-.77-3.285-1.692-1.186-.578c-2.13-1.067-4.272-2.08-6.429-3.04l-1.166-.547-3.356-1.5-1.49-.648c-3.617-1.56-7.267-3.036-10.95-4.428l-1.501-.568c-1.146-.425-2.292-.84-3.448-1.246l-1.206-.425c-2.251-.78-4.512-1.54-6.774-2.26l-1.145-.365c-1.176-.365-2.342-.72-3.519-1.013l-1.53-.446c-3.759-1.094-7.544-2.108-11.357-3.04l-1.541-.365-3.57-.81-1.277-.274c-2.311-.486-4.623-.952-6.935-1.378l-1.207-.223-3.6-.618-1.591-.253c-3.853-.608-7.723-1.128-11.61-1.56l-1.612-.173c-1.203-.135-2.41-.257-3.62-.365l-1.358-.111c-2.332-.203-4.675-.368-7.027-.497l-1.237-.08-3.65-.163h-1.653c-2.704-.094-5.435-.142-8.192-.142-7.247 0-14.517.308-21.81.922l-.65.061c-2.159.193-4.309.406-6.468.649l-1.014.111c-2.069.243-4.144.51-6.226.8l-1.014.143c-2.18.304-4.35.648-6.52 1.013l-.598.101c-4.836.831-9.683 1.804-14.51 2.908-71.036 16.284-131.436 60.108-170.057 123.408L673.166 450.575c-43.812 72.602-116.35 119.243-199.027 128.008-9.148.963-18.34 1.446-27.538 1.449-70.976 0-136.943-28.645-185.734-80.677L3.73 237.26l-.294.283 257.146 262.004c12.686 13.541 26.79 25.682 42.068 36.215 2.623 1.817 5.28 3.573 7.97 5.269h.081c1.247.79 2.515 1.57 3.782 2.34l.497.304c1.237.75 2.484 1.49 3.741 2.22l.426.253c6.76 3.918 13.705 7.515 20.837 10.791l.213.102c1.348.618 2.697 1.216 4.055 1.813l.457.203c1.358.588 2.717 1.175 4.056 1.743l.243.101c7.24 2.993 14.61 5.648 22.114 7.965l.294.09c1.42.437 2.839.862 4.269 1.267l.436.132c1.45.416 2.91.82 4.37 1.206 7.604 2.027 15.304 3.715 23.097 5.066l.446.081c1.45.244 2.91.477 4.36.7l.457.07c7.767 1.156 15.584 1.96 23.452 2.412h.244c1.47.081 2.94.152 4.42.203h.619c1.45 0 2.91.091 4.36.121H446.956c2.203 0 4.404-.03 6.6-.09h.436c2.103-.062 4.208-.143 6.317-.244h.386c4.481-.243 8.966-.58 13.455-1.013 82.808-8.725 155.467-55.447 199.36-128.19l103.17-240.209c38.53-63.178 98.859-106.931 169.784-123.184 3.853-.882 7.706-1.652 11.559-2.361l1.653-.304c1.581-.284 3.153-.537 4.735-.79l2.058-.325z" />
+                    <path fill="url(#1y2tcf7r7L)"
+                        d="M298.24 574.044c47.038 32.424 102.409 46.752 160.011 41.544 85.171-7.67 159.077-56.744 202.697-134.553l120.375-280.476c37.719-66.624 100.624-113.954 172.603-129.862 69-15.25 138.657-1.014 196.158 40.034l403.163 304.917.223-.294-403.173-304.906c-1.197-.852-2.434-1.723-3.66-2.564-56.781-39.123-125.304-52.458-192.792-37.491C881.765 86.32 818.768 133.723 781 200.447L660.624 480.872c-43.6 77.74-117.324 126.711-202.403 134.371-7.534.68-15.149 1.014-22.652 1.014-35.954.123-71.475-7.843-103.929-23.306-32.629-15.543-61.262-38.058-85.11-66.876L3.042 241.16l-.274.243 243.488 284.833c15.032 18.262 32.527 34.351 51.985 47.807z" />
+                    <path fill="url(#0tg73k7t5M)"
+                        d="M1156.786 99.768c-56.436-44.453-125.911-60.797-195.62-45.932-74.099 15.776-138.058 65.59-175.493 136.66L648.061 511.15c-42.596 81.62-119.392 134.189-205.455 140.704-6.175.466-12.34.7-18.444.7-75.751 0-144.922-35.729-191.939-99.87L2.292 244.972l-.264.243 229.88 307.703c16.524 22.774 36.769 42.605 59.884 58.658 44.141 30.42 97.394 44.774 150.854 40.663 86.185-6.535 163.113-59.216 205.76-140.927L786.028 190.68C823.402 119.7 887.26 69.967 961.217 54.221c69.505-14.794 138.91 1.49 195.295 45.85l408.355 335.832.243-.304-408.324-335.831z" />
+                    <path fill="url(#uv7o21mxnN)"
+                        d="M635.853 541.568l154.85-360.728C827.68 105.442 892.46 53.31 968.415 37.755c69.07-14.186 139.995 4.671 194.606 51.626l413.515 366.747.234-.263-413.516-366.757c-28.066-24.126-59.752-40.795-94.145-49.53-32.995-8.381-67.469-9.127-100.796-2.178-76.045 15.574-140.938 67.789-177.977 143.258L635.498 541.385c-42.19 86.585-120.04 141.566-208.223 147.068-4.725.294-9.45.446-14.134.446-77.74 0-149.932-40.207-195.245-109.516L1.612 248.811l-.304.192 216.284 330.593c18.504 28.301 41.054 51.678 67.021 69.592 8.84 6.064 18.089 11.508 27.681 16.294 35.617 17.779 75.308 25.82 115.042 23.305 88.274-5.502 166.236-60.553 208.517-147.22z" />
+                    <path fill="url(#ugx1su1sdO)"
+                        d="M276.867 686.872c-11.174-7.707-21.657-16.37-31.33-25.89-16.455-16.296-30.682-34.694-42.313-54.716L.578 252.773l.375-.213L203.6 606.043c46.115 78.742 124.097 123.195 208.589 118.929 90.18-4.56 168.973-61.871 210.758-153.31L795.01 170.778c18.586-40.531 44.452-74.415 76.877-100.71 30.601-24.825 66.393-41.808 103.524-49.113 33.49-6.73 68.105-5.379 100.968 3.941 34.413 9.738 65.846 27.734 93.415 53.512l418.707 397.722-.294.304L1169.46 78.722C1115.812 28.564 1045.11 7.67 975.463 21.38 897.592 36.701 831.97 91.195 795.407 170.96L623.34 571.846c-10.461 23.103-23.883 44.749-39.93 64.394-14.725 17.973-31.828 33.861-50.838 47.229-36.127 25.332-77.75 39.781-120.365 41.94-40.293 2.039-80.362-7.13-115.752-26.488-6.732-3.677-13.27-7.698-19.59-12.048z" />
+                    <path fill="url(#6orbk47srP)"
+                        d="M388.938 762.088c-38.074-.02-75.439-10.289-108.167-29.73-18.726-11.154-35.766-24.918-50.606-40.875-16.301-17.6-30.177-37.296-41.258-58.568L0 256.735l.365-.183 188.897 376.18c11.064 21.24 24.918 40.907 41.197 58.477 14.815 15.926 31.824 29.662 50.514 40.795 35.107 20.867 75.514 31.116 116.33 29.506 43.224-1.702 85.394-16.496 121.967-42.78 19.316-13.96 36.585-30.549 51.305-49.286 16.187-20.671 29.575-43.386 39.818-67.556L799.696 160.94c8.979-21.052 20.345-41.006 33.876-59.47 12.568-17.11 27.144-32.654 43.417-46.296 31.077-25.93 67.477-43.419 105.277-50.573 33.69-6.518 68.471-4.572 101.222 5.665 34.474 10.73 65.622 30.074 92.735 57.483l423.706 428.516-.284.284L1175.93 68.032c-27.052-27.359-58.2-46.672-92.563-57.372C1050.68.434 1015.963-1.513 982.337 4.995c-37.729 7.164-74.068 24.603-105.085 50.482-16.25 13.625-30.805 29.147-43.356 46.236-13.51 18.442-24.86 38.372-33.825 59.399L610.798 602.07c-10.273 24.194-23.687 46.93-39.898 67.626-14.748 18.765-32.043 35.38-51.387 49.367-36.644 26.345-78.894 41.14-122.19 42.852-2.798.115-5.593.172-8.385.172z" />
+                </g>
+            </svg></div>
+        <div class="header_primary" id="header-primary">
+            <div class="header_primary_logo"> <a href="../../index.html"><img src="../../src/imgs/icons/logo_blks.png"
+                        alt="Blockstream"></a></div>
+            <div class="hamburger header_primary_mobile-menu-button" onclick="mobileNavToggle()">
+                <div class="bar top"></div>
+                <div class="bar middle"></div>
+                <div class="bar bottom"></div>
+            </div>
+            <nav class="header_primary_navigation">
+                <ul class="header_primary_navigation_list">
+                    <li class="header_primary_navigation_item"> <a
+                            class='header_primary_navigation_item_link header_primary_navigation_dropdown-button '
+                            id="nav-dropdown-products" href="#" onclick="mobileNavDropdown(event)"> Products <span>
+                                <div class="arrow-icon">
+                                    <div class="arrow a-top"></div>
+                                    <div class="arrow a-bottom"></div>
+                                </div>
+                            </span> </a>
+                        <ul class="header_primary_navigation_item_sub-list" id="primary_navigation_list_products">
+                            <li class="header_primary_navigation_item_sub-list_header">
+                                <ul class="product-subnav-grid-container">
+                                    <li class="header_primary_navigation_item_sub-list_item liquid-gradBg"
+                                        id="primary_navigation_liquid"> <a class='product-subnav-grid-container_link '
+                                            data-nav-item="liquid" href="../../pages/liquid/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Liquid Network</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        A sidechain-based settlement network for traders.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_liquid_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover liquid-grad-hover '
+                                            data-nav-item="liquid" href="../../pages/liquid/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Liquid Network</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        A sidechain-based settlement network for traders.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_liquid_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item aqua-gradBg"
+                                        id="primary_navigation_block-explorer"> <a
+                                            class='product-subnav-grid-container_link nav-link-active'
+                                            data-nav-item="aqua" href="index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        AQUA</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        A simple Bitcoin and Liquid wallet built for everyone.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_aqua_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a
+                                            class='product-subnav-grid-container_link_hover aqua-gradBg-hover nav-link-active'
+                                            data-nav-item="aqua" href="index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        AQUA</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        A simple Bitcoin and Liquid wallet built for everyone.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_aqua_solid.svg" /></div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item amp-gradBg"
+                                        id="primary_navigation_block-explorer"> <a
+                                            class='product-subnav-grid-container_link ' data-nav-item="amp"
+                                            href="../amp/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream AMP</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        An API to issue and manage digital assets on the Liquid Network.
+                                                    </p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_amp_outline.svg" /></div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover amp-gradBg-hover '
+                                            data-nav-item="amp" href="../amp/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream AMP</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        An API to issue and manage digital assets on the Liquid Network.
+                                                    </p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_amp_solid.svg" /></div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item green-gradBg"
+                                        id="primary_navigation_ice"> <a class='product-subnav-grid-container_link '
+                                            data-nav-item="green-address" href="../green/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Green</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        A multi-platform, feature-rich Bitcoin and Liquid wallet.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_green_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover green-gradBg-hover '
+                                            data-nav-item="green-address" href="../green/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Green</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        A multi-platform, feature-rich Bitcoin and Liquid wallet.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_green_solid.svg" /></div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item mining-gradBg"
+                                        id="primary_navigation_green-address"> <a
+                                            class='product-subnav-grid-container_link ' data-nav-item="mining"
+                                            href="../mining/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Mining</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Colocation services for Bitcoin mining operations.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_mining_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover mining-gradBg-hover '
+                                            data-nav-item="mining" href="../mining/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Mining</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Colocation services for Bitcoin mining operations.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_mining_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item satellite-gradBg"
+                                        id="primary_navigation_satellite"> <a
+                                            class='product-subnav-grid-container_link ' data-nav-item="satellite"
+                                            href="../satellite/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Satellite</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        The Bitcoin blockchain, delivered from space.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_satellite_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover satellite-gradBg-hover '
+                                            data-nav-item="satellite" href="../satellite/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Satellite</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        The Bitcoin blockchain, delivered from space.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_satellite_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item explorer-gradBg"
+                                        id="primary_navigation_mining"> <a class='product-subnav-grid-container_link'
+                                            data-nav-item="block-explorer" href="https://blockstream.info/"
+                                            target="_blank">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Explorer</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Search data from the Bitcoin and Liquid blockchains.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_explorer_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover explorer-gradBg-hover'
+                                            data-nav-item="block-explorer" href="https://blockstream.info/"
+                                            target="_blank">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Explorer</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Search data from the Bitcoin and Liquid blockchains.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_explorer_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item crypto-gradBg"
+                                        id="primary_navigation_mining"> <a class='product-subnav-grid-container_link '
+                                            data-nav-item="ice" href="../cryptofeed/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Cryptocurrency Data Feed</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Real-time and historical cryptocurrency trade data.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_datafeed_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover crypto-gradBg-hover '
+                                            data-nav-item="ice" href="../cryptofeed/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Cryptocurrency Data Feed</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Real-time and historical cryptocurrency trade data.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_datafeed_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item lightning-gradBg"
+                                        id="primary_navigation_mining"> <a class='product-subnav-grid-container_link '
+                                            data-nav-item="lightning" href="../lightning/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Lightning Network</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Our own implementation of the Lightning protocol.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_lightning_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover lightning-gradBg-hover '
+                                            data-nav-item="lightning" href="../lightning/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Lightning Network</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Our own implementation of the Lightning protocol.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_lightning_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item elements-gradBg"
+                                        id="primary_navigation_block-explorer"> <a
+                                            class='product-subnav-grid-container_link ' data-nav-item="elements"
+                                            href="../elements/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Elements</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        An open-source, sidechain-capable blockchain platform.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_elements_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover elements-gradBg-hover '
+                                            data-nav-item="elements" href="../elements/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Elements</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        An open-source, sidechain-capable blockchain platform.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../src/imgs/nav_icons/navigation_icons_elements_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                </ul>
+                            </li>
+                            <!--<li class="footer-header"><div class="product-nav-footer"><div class="product-nav-footer_hover"> <a href="https://help.blockstream.com/">Support</a> <a href="https://help.blockstream.com/">Support</a></div></div></li>-->
+                        </ul>
+                    </li>
+                    <li class="header_primary_navigation_item"> <a
+                            class='header_primary_navigation_item_link header_primary_navigation_dropdown-button'
+                            id="nav-dropdown-news" href="#" onclick="mobileNavDropdown(event)"> Newsroom <span>
+                                <div class="arrow-icon">
+                                    <div class="arrow a-top"></div>
+                                    <div class="arrow a-bottom"></div>
+                                </div>
+                            </span> </a>
+                        <ul class="header_primary_navigation_item_sub-list" id="primary_navigation_list_news">
+                            <li class="header_primary_navigation_item_sub-list_header">
+                                <ul class="subnav-grid-container">
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_blog">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title blog-link'
+                                                    href="#" data-nav-item="blog" onclick="blogLinkClicked(event)"> <i
+                                                        class="fal fa-edit header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Blog</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_press-newsroom">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                    href="../newsroom/index.html" data-nav-item="newsroom"> <i
+                                                        class="fal fa-newspaper header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>In
+                                                    The News</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_press-release">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                    href="../press-releases/index.html" data-nav-item="press-release">
+                                                    <i
+                                                        class="fal fa-list-alt header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Press
+                                                    Releases</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_brand-assets">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                    href="../brand-assets/index.html" data-nav-item="brand-assets"> <i
+                                                        class="fal fa-toolbox header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Brand
+                                                    Assets</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header_primary_navigation_item"> <a
+                            class='header_primary_navigation_item_link header_primary_navigation_dropdown-button'
+                            id="nav-dropdown-developer" href="#" onclick="mobileNavDropdown(event)"> Developers <span>
+                                <div class="arrow-icon">
+                                    <div class="arrow a-top"></div>
+                                    <div class="arrow a-bottom"></div>
+                                </div>
+                            </span> </a>
+                        <ul class="header_primary_navigation_item_sub-list" id="primary_navigation_list_developer">
+                            <li class="header_primary_navigation_item_sub-list_header">
+                                <ul class="subnav-grid-container">
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_eng-blog">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title'
+                                                    href="https://medium.com/blockstream" target="blank"
+                                                    data-nav-item="eng-blog"> <i
+                                                        class="fal fa-cog header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Engineering
+                                                    Blog</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_documentation">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title'
+                                                    href="https://docs.blockstream.com/" target="blank"
+                                                    data-nav-item="documentation"> <i
+                                                        class="fal fa-code header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Documentation</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header_primary_navigation_item"> <a
+                            class='header_primary_navigation_item_link header_primary_navigation_dropdown-button '
+                            id="nav-dropdown-about" href="#" onclick="mobileNavDropdown(event)"> Company <span>
+                                <div class="arrow-icon">
+                                    <div class="arrow a-top"></div>
+                                    <div class="arrow a-bottom"></div>
+                                </div>
+                            </span> </a>
+                        <ul class="header_primary_navigation_item_sub-list" id="primary_navigation_list_about">
+                            <li class="header_primary_navigation_item_sub-list_header">
+                                <ul class="subnav-grid-container">
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_research">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                    href="../research/index.html" data-nav-item="research"> <i
+                                                        class="fal fa-book-open header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Research</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_about">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                    href="../about/index.html" data-nav-item="about"> <i
+                                                        class="fal fa-building header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>About</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_careers">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                    href="../careers/index.html" data-nav-item="careers"> <i
+                                                        class="fal fa-user header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Careers</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header_primary_navigation_item store-link"> <a
+                            class="header_primary_navigation_item_link " href="https://store.blockstream.com/">Store</a>
+                    </li>
+                    <li class="header_primary_navigation_item store-link"> <a
+                            class="header_primary_navigation_item_link "
+                            href="https://help.blockstream.com/">Support</a></li>
+                    <li class="header_primary_navigation_item header_primary_navigation_item_no-line">
+                        <div class="language-button" id="language-selector"></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <header class="header-new">
+            <div class="header-new_intro">
+                <div class="header-new_intro_left">
+                    <div class="header-new_intro_right_logo header-new_intro_right_logo_aqua"> <svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 211.85">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #fff;
+                                    }
+
+                                    .cls-2 {
+                                        fill: #13cdc2;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <path class="cls-1"
+                                        d="M519.66,206.73H398.27q-24.16,0-43.93-7a94.52,94.52,0,0,1-33.83-20.19,89.25,89.25,0,0,1-21.75-32.4q-7.67-19.2-7.67-43.64,0-23,8.1-41.94a96.27,96.27,0,0,1,22.6-32.55A102.86,102.86,0,0,1,356.05,7.87a124.92,124.92,0,0,1,85.43,0,101.56,101.56,0,0,1,34,21.18A95.55,95.55,0,0,1,497.77,61.6q8,18.91,8,41.94a94.3,94.3,0,0,1-3.13,25,98.87,98.87,0,0,1-8.1,20.62,79.74,79.74,0,0,1-11.37,16.2,83.67,83.67,0,0,1-13.22,11.8v.57h49.75ZM398.83,32.46a68.56,68.56,0,0,0-27.14,5.4,66,66,0,0,0-21.75,14.79,68.56,68.56,0,0,0-14.36,22.46,75.41,75.41,0,0,0-5.26,28.43,82.89,82.89,0,0,0,5,29.42,65.77,65.77,0,0,0,13.93,22.6,62.89,62.89,0,0,0,21.46,14.64,74.54,74.54,0,0,0,55,0,64.18,64.18,0,0,0,21.75-14.64A66.53,66.53,0,0,0,461.66,133a80.71,80.71,0,0,0,5.12-29.42A81.43,81.43,0,0,0,462,75.11,63.35,63.35,0,0,0,426.7,37.86a69.83,69.83,0,0,0-27.87-5.4" />
+                                    <path class="cls-2"
+                                        d="M469.91,177.74v-.57a83.67,83.67,0,0,0,13.22-11.8,79.74,79.74,0,0,0,11.37-16.2q1.77-3.28,3.3-6.84H457.27A63.17,63.17,0,0,1,425.7,170.2a74.54,74.54,0,0,1-55,0,62.28,62.28,0,0,1-31.11-27.87H297c.55,1.64,1.15,3.26,1.78,4.85a89.25,89.25,0,0,0,21.75,32.4,94.52,94.52,0,0,0,33.83,20.19q19.76,7,43.93,7H519.66v-29Z" />
+                                    <path class="cls-1"
+                                        d="M750.23,132.82A82.73,82.73,0,0,1,744,165.65a73.41,73.41,0,0,1-17.06,24.88,75.15,75.15,0,0,1-25.58,15.78c-9.86,3.69-24.29,5.54-35.85,5.54s-26-1.85-35.84-5.54a76.59,76.59,0,0,1-25.73-15.78,70.82,70.82,0,0,1-17.06-24.88q-6.12-14.62-6.11-32.83V5.46h35.82V131.4a68.47,68.47,0,0,0,2.27,17.48,42.86,42.86,0,0,0,7.54,15.49,38.72,38.72,0,0,0,13.93,11.09c5.77,2.85,16.65,4.27,25.18,4.27s19.4-1.42,25.19-4.27a38.89,38.89,0,0,0,13.93-11.09,43,43,0,0,0,7.53-15.49,68.48,68.48,0,0,0,2.28-17.48V5.46h35.82Z" />
+                                    <path class="cls-2"
+                                        d="M713.52,142.33c-.35,2.19-.82,4.37-1.39,6.55a43,43,0,0,1-7.53,15.49,38.89,38.89,0,0,1-13.93,11.09c-5.79,2.85-16.66,4.27-25.19,4.27s-19.41-1.42-25.18-4.27a38.72,38.72,0,0,1-13.93-11.09,42.86,42.86,0,0,1-7.54-15.49q-.86-3.27-1.39-6.55H581.18a79.8,79.8,0,0,0,5.67,23.32,70.82,70.82,0,0,0,17.06,24.88,76.59,76.59,0,0,0,25.73,15.78c9.85,3.69,24.28,5.54,35.84,5.54s26-1.85,35.85-5.54a75.15,75.15,0,0,0,25.58-15.78A73.41,73.41,0,0,0,744,165.65a78.34,78.34,0,0,0,5.8-23.32Z" />
+                                    <polygon class="cls-1"
+                                        points="1000 205.99 958.81 205.99 939.97 169.2 894.95 80.93 849.93 169.2 831.1 205.99 789.91 205.99 808.74 169.2 894.95 0.01 981.17 169.2 1000 205.99" />
+                                    <polygon class="cls-2"
+                                        points="822.43 142.33 808.74 169.2 789.91 205.99 831.1 205.99 849.93 169.2 863.64 142.33 822.43 142.33" />
+                                    <polygon class="cls-2"
+                                        points="967.47 142.33 926.27 142.33 939.97 169.2 958.81 205.99 1000 205.99 981.17 169.2 967.47 142.33" />
+                                    <path class="cls-1"
+                                        d="M127,0,0,142.34l84.37,64.49h85.12L254,142.34Zm1.44,180.57h0l-1.42,0h0l-1.42,0h0c-26.76-.76-50-21.83-50-48.77,0-9,4.14-21.51,8.33-28.8C94.66,81.82,116,53.54,123.62,33h0l2.18-6.05a1.26,1.26,0,0,1,2.36,0l2.14,5.92c0,.09.06.19.1.28a.14.14,0,0,1,0,.07h0c7.63,20.49,28.92,48.66,39.63,69.8,4.19,7.28,8.33,19.78,8.33,28.79,0,26.94-23.2,48-50,48.77" />
+                                    <path class="cls-2"
+                                        d="M128.43,180.57h0l-1.42,0h0l-1.42,0h0c-23.16-.66-43.64-16.52-48.74-38.24H0l84.37,64.49h85.12L254,142.34H177.17C172.07,164.05,151.58,179.91,128.43,180.57Z" />
+                                </g>
+                            </g>
+                        </svg></div>
+                    <h2 class="header-new_intro_title">Your bitcoin and Liquid assets,<br>all in one place.</h2>
+                    <p class="header-new_intro_text"></p>
+                    <div class="header-new_intro_button_holder"> <a href="https://apps.apple.com/app/id1500791973"> <img
+                                width="160px" src="../../src/imgs/img_svg/appstore.svg"> </a></div>
+                </div>
+                <div class="header-new_intro_right"> <img class="header-new_intro_right_aqua-phone"
+                        src="../../src/imgs/aqua/aqua_home_screen_scaled.png"></div>
+            </div>
+            <!--<div class="floating-box-container"><div class="floating-box"></div><div class="floating-box"></div><div class="floating-box"></div><div class="floating-box"></div><div class="floating-box"></div><div class="floating-box"></div><div class="floating-box"></div><div class="floating-box"></div></div>-->
+        </header>
+        <div class="aqua_title aqua_title_header"> AQUA supports Bitcoin and assets issued on the Liquid Network.</div>
+        <div class="video-holder"> <video autoplay muted loop poster="../../src/imgs/aqua/aqua_video_poster.jpg"
+                src="../../src/others/assets/videos/aqua_promo_compressed_v2.mp4"></video></div>
+        <div class="aqua_content-section">
+            <div class="headline-row large fly headline-row_spacing_large">
+                <div class="headline-row_block">
+                    <div class="headline-row_block_content"> <span class="headline-row_block_content_title">Buy bitcoin
+                            in two easy steps</span>
+                        <div class="headline-row_block_content_text"> Buy bitcoin and Liquid Bitcoin right from the AQUA
+                            app, no documents required. Multiple payment options are available including Apple Pay and
+                            debit cards.</div>
+                    </div>
+                </div>
+                <div class="headline-row_icon"> <img class="headline-row_image-size_small"
+                        src="../../src/imgs/aqua/buy-bitcoin-2x.png" alt="Blockstream Green"></div>
+            </div>
+            <div class="headline-row large fly reverse headline-row_spacing_large">
+                <div class="headline-row_block">
+                    <div class="headline-row_block_content"> <span class="headline-row_block_content_title">Send
+                            payments faster</span>
+                        <div class="headline-row_block_content_text"> Transactions on the Liquid Network are fully
+                            settled in two minutes—no more waiting for those important transactions to confirm!</div>
+                    </div>
+                </div>
+                <div class="headline-row_icon"> <img class="headline-row_image-size_medium"
+                        src="../../src/imgs/aqua/fast-payments-2x.png" alt="Blockstream Green"></div>
+            </div>
+            <div class="headline-row large fly headline-row_spacing_large">
+                <div class="headline-row_block">
+                    <div class="headline-row_block_content"> <span class="headline-row_block_content_title">Keep your
+                            finances safe</span>
+                        <div class="headline-row_block_content_text"> The Liquid Network uses clever cryptography to
+                            keep your transaction data hidden on the Liquid sidechain. Not even Blockstream can see what
+                            Liquid assets are in your wallet.</div>
+                    </div>
+                </div>
+                <div class="headline-row_icon"> <img class="headline-row_image-size_medium"
+                        src="../../src/imgs/aqua/confidential-tx-2x.png" alt="Blockstream Green"></div>
+            </div>
+        </div>
+        <div class="aqua_fullwidth-image"> <img src="../../src/imgs/aqua/aqua-section-bg.png"></div>
+        <div class="aqua_title aqua_title_second"> Be your own bank, without the headaches.</div>
+        <div class="reason-cards reason-cards-aqua fly">
+            <div class="reason-cards_first-row">
+                <div class="reason-card reason-card_left"> <img class="reason-card_image reason-card_image_size_small"
+                        src="../../src/imgs/icons/diamond.svg" alt="You are in control">
+                    <div class="reason-card_title">You are in control</div>
+                    <div class="reason-card_text">The keys to your assets are held on your device, ensuring that you’re
+                        always in control.</div>
+                </div>
+                <div class="reason-card reason-card_left"> <img class="reason-card_image reason-card_image_size_small"
+                        src="../../src/imgs/icons/diamond-key.svg" alt="Your keys, your assets">
+                    <div class="reason-card_title">Your keys, your assets</div>
+                    <div class="reason-card_text">Protect yourself from exchange hacks and thefts by keeping your assets
+                        on AQUA.</div>
+                </div>
+                <div class="reason-card reason-card_left"> <img class="reason-card_image reason-card_image_size_small"
+                        src="../../src/imgs/icons/diamonds.svg" alt="Easy backups">
+                    <div class="reason-card_title">Easy backups</div>
+                    <div class="reason-card_text">Make a backup of your wallet at any time by recording a simple
+                        recovery phrase.</div>
+                </div>
+            </div>
+        </div>
+        <div class="aqua_content-section reimagine-section">
+            <div class="headline-row large fly headline-row_spacing_large">
+                <div class="headline-row_block">
+                    <div class="headline-row_block_content"> <span class="headline-row_block_content_title">Reimagine
+                            AQUA, your way.</span>
+                        <div class="headline-row_block_content_text"> Are you a developer and like the look of AQUA? The
+                            AQUA wallet is fully open-source, empowering you to quickly deploy a fully-functional wallet
+                            for the Liquid Network with your own branding and features. Stay up to date with the latest
+                            on GitHub.</div>
+                        <div class="headline-row_block_content_arrow-button"> <a
+                                href="https://github.com/blockstream/aqua_ios" class="arrow-button arrow-button_liquid">
+                                <div class="arrow-button_text"> GitHub</div><i
+                                    class="fal fa-long-arrow-right arrow-button_arrow"></i>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="headline-row_icon"> <img class="headline-row_image-size_medium"
+                        src="../../src/imgs/img/landing_liquid.png" alt="Reimagine AQUA"></div>
+            </div>
+        </div>
+        <div class="aqua_download-section-holder">
+            <div class="aqua_download-section_background"> <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1600 763">
+                    <defs>
+                        <linearGradient id="l0dgyewkea" x1="0%" x2="100%" y1="50.001%" y2="50.001%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="m5yofb8k0b" x1="0%" x2="100%" y1="49.999%" y2="49.999%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="hggzjo799c" x1="-.005%" x2="100%" y1="50.005%" y2="50.005%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="ay2gyf0btd" x1="0%" x2="100%" y1="50.002%" y2="50.002%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="5kuzmddv9e" x1="0%" x2="100%" y1="49.997%" y2="49.997%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="ig7yhqzwif" x1=".001%" x2="100.001%" y1="49.998%" y2="49.998%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="fodpqbc0rg" x1="0%" x2="101%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="s9s3cig6zh" x1="19%" x2="81%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="hq52k2uhii" x1="0%" x2="100%" y1="49.5%" y2="49.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="wukbnu1jyj" x1="0%" x2="104%" y1="49.5%" y2="49.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="j406oto2zk" x1="0%" x2="100%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="lqwqe3zmil" x1="0%" x2="100%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="6h08mrqf7m" x1="15.5%" x2="84.5%" y1="50.5%" y2="50.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="vma7q71lpn" x1="0%" x2="100%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="xhioytwiro" x1="-1.775%" x2="98.225%" y1="50.5%" y2="50.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="4fn561x9jp" x1="-1.361%" x2="98.639%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="hhq2725niq" x1="0%" x2="100%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="gqzwmupjzr" x1="0%" x2="100%" y1="50.005%" y2="50.005%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="wgt99szqxs" x1="0%" x2="100%" y1="47.5%" y2="47.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="0nadk2wlet" x1="0%" x2="100%" y1="49.5%" y2="49.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="45z70yap4u" x1="0%" x2="100%" y1="49%" y2="49%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="6optwmnuav" x1="0%" x2="100%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="tt9plwvtmw" x1="0%" x2="100%" y1="50.5%" y2="50.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="uj7z6uwklx" x1="0%" x2="100%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="izphwj844y" x1="0%" x2="100%" y1="49.5%" y2="49.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="qupq8zzcmz" x1="0%" x2="100%" y1="49.5%" y2="49.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="kpdev5wxdA" x1="0%" x2="100%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="9c518d6aoB" x1="0%" x2="100%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="574piy4psC" x1="0%" x2="100%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="4gnmxij10D" x1="0%" x2="100%" y1="50.5%" y2="50.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="7kztgev6dE" x1="0%" x2="100%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="4f1ubx913F" x1="0%" x2="100%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="ese026xlwG" x1="0%" x2="100%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="vszns4ejnH" x1="0%" x2="100%" y1="47.5%" y2="47.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="paq6vpgalI" x1="0%" x2="100%" y1="49.5%" y2="49.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="s570xpkq0J" x1="0%" x2="100%" y1="49.5%" y2="49.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="abt9q97rrK" x1="0%" x2="100%" y1="50.5%" y2="50.5%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="1y2tcf7r7L" x1="-.003%" x2="100%" y1="49.998%" y2="49.998%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="0tg73k7t5M" x1="-.003%" x2="100.002%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="uv7o21mxnN" x1="0%" x2="100%" y1="50.001%" y2="50.001%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="ugx1su1sdO" x1="0%" x2="99.997%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                        <linearGradient id="6orbk47srP" x1=".002%" x2="100%" y1="50%" y2="50%">
+                            <stop offset="0%" stop-color="#13CDC2" />
+                            <stop offset="32%" stop-color="#00647A" />
+                            <stop offset="40%" stop-color="#01697E" />
+                            <stop offset="49%" stop-color="#047888" />
+                            <stop offset="59%" stop-color="#089199" />
+                            <stop offset="70%" stop-color="#0EB3B0" />
+                            <stop offset="77%" stop-color="#13CDC2" />
+                            <stop offset="78%" stop-color="#12C6BD" />
+                            <stop offset="85%" stop-color="#0A989D" />
+                            <stop offset="91%" stop-color="#057786" />
+                            <stop offset="97%" stop-color="#016378" />
+                            <stop offset="100%" stop-color="#005C73" />
+                        </linearGradient>
+                    </defs>
+                    <g fill="none">
+                        <path fill="url(#l0dgyewkea)"
+                            d="M1104.882 185.603l366.59 89.168.112-.476-366.59-89.169c-130.069-31.655-270.064 1.318-356.705 84.032-63.544 60.685-157.465 95.501-257.673 95.501-49.086.16-97.803-8.465-143.848-25.463L8.375 213.468l-.172.456 338.423 125.728c139.285 51.748 304.608 22.9 402.048-70.12 86.47-82.612 226.292-115.513 356.208-83.93z" />
+                        <path fill="url(#m5yofb8k0b)"
+                            d="M752.994 259.319l-17.237 40.095-.234.243c-61.79 65.62-153.267 100.68-246.915 100.69-53.955.112-107.27-11.672-156.147-34.512L7.584 217.5l-.203.435L332.26 366.311c137.196 64.576 307.021 36.58 403.863-66.573l17.237-40.085.233-.243c85.171-90.06 228.978-124.005 357.698-84.467l371.884 119.922.142-.456-371.864-119.963c-129.034-39.63-273.125-5.532-358.458 84.873z" />
+                        <path fill="url(#hggzjo799c)"
+                            d="M758.215 249.56c83.935-97.78 231.788-132.88 359.534-85.358l377.115 150.695.173-.425-377.126-150.696c-128.02-47.624-276.208-12.392-360.243 85.714l-34.413 80.18-.162.193c-28.32 33.266-65.663 60.473-108.016 78.692-42.002 17.853-87.182 27.042-132.826 27.014-58.464 0-115.204-14.885-164.096-43.045L6.875 221.493l-.224.395 311.28 171.032c132.634 76.401 310.835 48.728 405.71-62.986l34.412-80.17.162-.203z" />
+                        <path fill="url(#ay2gyf0btd)"
+                            d="M762.342 239.661l-51.64 120.287-.111.152c-27.907 35.747-63.92 64.351-105.065 83.453-40.675 18.82-84.962 28.563-129.785 28.555-62.154 0-121.602-18.24-171.903-52.863L6.013 225.515l-.223.355 297.774 193.72c130.16 89.492 312.953 62.823 407.503-59.4l51.63-120.286.122-.162c82.626-105.503 234.606-141.768 361.389-86.24l382.347 181.478.183-.385-382.358-181.478c-127.026-55.64-279.32-19.253-362.038 86.544z" />
+                        <path fill="url(#5kuzmddv9e)"
+                            d="M766.925 230.015l-68.674 160.098v.07c-44.117 62.145-113.815 103.963-191.28 114.714-13.23 1.835-26.572 2.756-39.93 2.756-65.074 0-128.131-21.917-177.54-61.739L5.242 229.437l-.274.355 284.269 216.487c5.323 4.296 10.86 8.42 16.446 12.26 28.924 19.874 61.333 34.13 95.534 42.021 34.671 8.099 70.542 9.723 105.805 4.793 77.566-10.76 147.396-52.69 191.635-115.078l68.674-160.098v-.061c81.338-113.366 237.485-150.877 363.336-87.243l387.579 212.322.213-.395-387.59-212.373c-126.002-63.665-282.463-26.021-363.944 87.588z" />
+                        <path fill="url(#ig7yhqzwif)"
+                            d="M274.9 472.918c9.502 8.861 19.645 17.01 30.347 24.38 53.688 36.944 119.442 52.913 185.186 44.888 80.02-9.62 151.663-54.177 195.64-121.675l85.892-200.163c79.939-121.036 240.304-159.764 365.15-88.155l392.791 243.187.223-.355-392.8-243.187c-124.98-71.77-285.618-32.952-365.72 88.307l-85.86 200.123c-43.902 67.41-115.447 111.905-195.356 121.492-11.031 1.348-22.134 2.025-33.247 2.027-68.097 0-132.715-25.271-181.962-71.173L4.46 233.37l-.273.314L274.9 472.918z" />
+                        <path fill="url(#gqzwmupjzr)"
+                            d="M966.469 83.504c1.531-.233 3.042-.445 4.593-.648l2.18-.274c1.531-.192 3.042-.364 4.603-.527.69-.08 1.39-.141 2.09-.212 1.57-.152 3.152-.304 4.724-.426l1.703-.122c6.267-.456 12.523-.709 18.769-.709 49.13-.004 97.214 14.184 138.463 40.856l398.003 274.051.233-.354-398.002-274.042-3.042-1.925-1.136-.71c-1.014-.648-2.119-1.296-3.184-1.925l-1.44-.85c-3.44-2.027-6.911-3.966-10.413-5.817l-1.46-.77-3.285-1.692-1.186-.578c-2.13-1.067-4.272-2.08-6.429-3.04l-1.166-.547-3.356-1.5-1.49-.648c-3.617-1.56-7.267-3.036-10.95-4.428l-1.501-.568c-1.146-.425-2.292-.84-3.448-1.246l-1.206-.425c-2.251-.78-4.512-1.54-6.774-2.26l-1.145-.365c-1.176-.365-2.342-.72-3.519-1.013l-1.53-.446c-3.759-1.094-7.544-2.108-11.357-3.04l-1.541-.365-3.57-.81-1.277-.274c-2.311-.486-4.623-.952-6.935-1.378l-1.207-.223-3.6-.618-1.591-.253c-3.853-.608-7.723-1.128-11.61-1.56l-1.612-.173c-1.203-.135-2.41-.257-3.62-.365l-1.358-.111c-2.332-.203-4.675-.368-7.027-.497l-1.237-.08-3.65-.163h-1.653c-2.704-.094-5.435-.142-8.192-.142-7.247 0-14.517.308-21.81.922l-.65.061c-2.159.193-4.309.406-6.468.649l-1.014.111c-2.069.243-4.144.51-6.226.8l-1.014.143c-2.18.304-4.35.648-6.52 1.013l-.598.101c-4.836.831-9.683 1.804-14.51 2.908-71.036 16.284-131.436 60.108-170.057 123.408L673.166 450.575c-43.812 72.602-116.35 119.243-199.027 128.008-9.148.963-18.34 1.446-27.538 1.449-70.976 0-136.943-28.645-185.734-80.677L3.73 237.26l-.294.283 257.146 262.004c12.686 13.541 26.79 25.682 42.068 36.215 2.623 1.817 5.28 3.573 7.97 5.269h.081c1.247.79 2.515 1.57 3.782 2.34l.497.304c1.237.75 2.484 1.49 3.741 2.22l.426.253c6.76 3.918 13.705 7.515 20.837 10.791l.213.102c1.348.618 2.697 1.216 4.055 1.813l.457.203c1.358.588 2.717 1.175 4.056 1.743l.243.101c7.24 2.993 14.61 5.648 22.114 7.965l.294.09c1.42.437 2.839.862 4.269 1.267l.436.132c1.45.416 2.91.82 4.37 1.206 7.604 2.027 15.304 3.715 23.097 5.066l.446.081c1.45.244 2.91.477 4.36.7l.457.07c7.767 1.156 15.584 1.96 23.452 2.412h.244c1.47.081 2.94.152 4.42.203h.619c1.45 0 2.91.091 4.36.121H446.956c2.203 0 4.404-.03 6.6-.09h.436c2.103-.062 4.208-.143 6.317-.244h.386c4.481-.243 8.966-.58 13.455-1.013 82.808-8.725 155.467-55.447 199.36-128.19l103.17-240.209c38.53-63.178 98.859-106.931 169.784-123.184 3.853-.882 7.706-1.652 11.559-2.361l1.653-.304c1.581-.284 3.153-.537 4.735-.79l2.058-.325z" />
+                        <path fill="url(#1y2tcf7r7L)"
+                            d="M298.24 574.044c47.038 32.424 102.409 46.752 160.011 41.544 85.171-7.67 159.077-56.744 202.697-134.553l120.375-280.476c37.719-66.624 100.624-113.954 172.603-129.862 69-15.25 138.657-1.014 196.158 40.034l403.163 304.917.223-.294-403.173-304.906c-1.197-.852-2.434-1.723-3.66-2.564-56.781-39.123-125.304-52.458-192.792-37.491C881.765 86.32 818.768 133.723 781 200.447L660.624 480.872c-43.6 77.74-117.324 126.711-202.403 134.371-7.534.68-15.149 1.014-22.652 1.014-35.954.123-71.475-7.843-103.929-23.306-32.629-15.543-61.262-38.058-85.11-66.876L3.042 241.16l-.274.243 243.488 284.833c15.032 18.262 32.527 34.351 51.985 47.807z" />
+                        <path fill="url(#0tg73k7t5M)"
+                            d="M1156.786 99.768c-56.436-44.453-125.911-60.797-195.62-45.932-74.099 15.776-138.058 65.59-175.493 136.66L648.061 511.15c-42.596 81.62-119.392 134.189-205.455 140.704-6.175.466-12.34.7-18.444.7-75.751 0-144.922-35.729-191.939-99.87L2.292 244.972l-.264.243 229.88 307.703c16.524 22.774 36.769 42.605 59.884 58.658 44.141 30.42 97.394 44.774 150.854 40.663 86.185-6.535 163.113-59.216 205.76-140.927L786.028 190.68C823.402 119.7 887.26 69.967 961.217 54.221c69.505-14.794 138.91 1.49 195.295 45.85l408.355 335.832.243-.304-408.324-335.831z" />
+                        <path fill="url(#uv7o21mxnN)"
+                            d="M635.853 541.568l154.85-360.728C827.68 105.442 892.46 53.31 968.415 37.755c69.07-14.186 139.995 4.671 194.606 51.626l413.515 366.747.234-.263-413.516-366.757c-28.066-24.126-59.752-40.795-94.145-49.53-32.995-8.381-67.469-9.127-100.796-2.178-76.045 15.574-140.938 67.789-177.977 143.258L635.498 541.385c-42.19 86.585-120.04 141.566-208.223 147.068-4.725.294-9.45.446-14.134.446-77.74 0-149.932-40.207-195.245-109.516L1.612 248.811l-.304.192 216.284 330.593c18.504 28.301 41.054 51.678 67.021 69.592 8.84 6.064 18.089 11.508 27.681 16.294 35.617 17.779 75.308 25.82 115.042 23.305 88.274-5.502 166.236-60.553 208.517-147.22z" />
+                        <path fill="url(#ugx1su1sdO)"
+                            d="M276.867 686.872c-11.174-7.707-21.657-16.37-31.33-25.89-16.455-16.296-30.682-34.694-42.313-54.716L.578 252.773l.375-.213L203.6 606.043c46.115 78.742 124.097 123.195 208.589 118.929 90.18-4.56 168.973-61.871 210.758-153.31L795.01 170.778c18.586-40.531 44.452-74.415 76.877-100.71 30.601-24.825 66.393-41.808 103.524-49.113 33.49-6.73 68.105-5.379 100.968 3.941 34.413 9.738 65.846 27.734 93.415 53.512l418.707 397.722-.294.304L1169.46 78.722C1115.812 28.564 1045.11 7.67 975.463 21.38 897.592 36.701 831.97 91.195 795.407 170.96L623.34 571.846c-10.461 23.103-23.883 44.749-39.93 64.394-14.725 17.973-31.828 33.861-50.838 47.229-36.127 25.332-77.75 39.781-120.365 41.94-40.293 2.039-80.362-7.13-115.752-26.488-6.732-3.677-13.27-7.698-19.59-12.048z" />
+                        <path fill="url(#6orbk47srP)"
+                            d="M388.938 762.088c-38.074-.02-75.439-10.289-108.167-29.73-18.726-11.154-35.766-24.918-50.606-40.875-16.301-17.6-30.177-37.296-41.258-58.568L0 256.735l.365-.183 188.897 376.18c11.064 21.24 24.918 40.907 41.197 58.477 14.815 15.926 31.824 29.662 50.514 40.795 35.107 20.867 75.514 31.116 116.33 29.506 43.224-1.702 85.394-16.496 121.967-42.78 19.316-13.96 36.585-30.549 51.305-49.286 16.187-20.671 29.575-43.386 39.818-67.556L799.696 160.94c8.979-21.052 20.345-41.006 33.876-59.47 12.568-17.11 27.144-32.654 43.417-46.296 31.077-25.93 67.477-43.419 105.277-50.573 33.69-6.518 68.471-4.572 101.222 5.665 34.474 10.73 65.622 30.074 92.735 57.483l423.706 428.516-.284.284L1175.93 68.032c-27.052-27.359-58.2-46.672-92.563-57.372C1050.68.434 1015.963-1.513 982.337 4.995c-37.729 7.164-74.068 24.603-105.085 50.482-16.25 13.625-30.805 29.147-43.356 46.236-13.51 18.442-24.86 38.372-33.825 59.399L610.798 602.07c-10.273 24.194-23.687 46.93-39.898 67.626-14.748 18.765-32.043 35.38-51.387 49.367-36.644 26.345-78.894 41.14-122.19 42.852-2.798.115-5.593.172-8.385.172z" />
+                    </g>
+                </svg></div>
+            <div class="aqua_content-section aqua_download-section"> <img class="aqua_download-section_aqua-icon"
+                    src="../../src/imgs/icons/aqua-app-store-icon.svg">
+                <h2 class="aqua_download-section_title">Get the AQUA wallet</h2><a
+                    class="aqua_download-section_appstore-button" href="https://apps.apple.com/app/id1500791973"> <img
+                        width="160px" src="../../src/imgs/img_svg/appstore.svg"> </a> <a
+                    class="aqua_download-section_terms-link" href="terms/index.html">Terms of Service</a>
+            </div>
+        </div>
+        <footer>
+            <div class="social-mobile">
+                <div class="social-links"> <a href="https://twitter.com/Blockstream" target="_blank"> <i
+                            class="fab fa-twitter"></i> </a> <a href="https://ca.linkedin.com/company/blockstream"
+                        target="_blank"> <i class="fab fa-linkedin-in"></i> </a> <a
+                        href="https://www.facebook.com/Blockstream/" target="_blank"> <i class="fab fa-facebook-f"></i>
+                    </a> <a href="https://github.com/Blockstream" target="_blank"> <i class="fab fa-github"></i> </a> <a
+                        href="https://www.youtube.com/channel/UCZNt3fZazX9cwWcC9vjDJ4Q" target="_blank"> <i
+                            class="fab fa-youtube"></i> </a></div>
+            </div>
+            <div id="footer">
+                <div class="footer-sitemap">
+                    <div class="footer-sitemap_logo-grid"> <img src="../../src/imgs/icons/BLKS_LOGO.svg" alt="Blockstream">
+                        <div class="social-desktop">
+                            <div class="social-links"> <a href="https://twitter.com/Blockstream" target="_blank"> <i
+                                        class="fab fa-twitter"></i> </a> <a
+                                    href="https://ca.linkedin.com/company/blockstream" target="_blank"> <i
+                                        class="fab fa-linkedin-in"></i> </a> <a
+                                    href="https://www.facebook.com/Blockstream/" target="_blank"> <i
+                                        class="fab fa-facebook-f"></i> </a> <a href="https://github.com/Blockstream"
+                                    target="_blank"> <i class="fab fa-github"></i> </a> <a
+                                    href="https://www.youtube.com/channel/UCZNt3fZazX9cwWcC9vjDJ4Q" target="_blank"> <i
+                                        class="fab fa-youtube"></i> </a></div>
+                        </div>
+                        <div class="footer-sitemap_logo-grid_terms_privacy">
+                            <ul>
+                                <li> <a href="../terms/index.html">Terms</a></li>
+                                <li> <a href="../privacy/index.html">Privacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-sitemap_logo-grid_copyright">
+                            <script type="text/javascript">
+                                document.write("&copy; " + new Date().getFullYear());
+                            </script> Blockstream Corporation Inc. All rights reserved.
+                        </div>
+                    </div>
+                    <div class="footer-sitemap_sitelinks">
+                        <div class="footer-sitemap_products">
+                            <h4 class="footer-title">Products</h4>
+                            <div class="footer-sitemap_products_twoColGrid collapse">
+                                <ul>
+                                    <li> <a href="../../pages/liquid/index.html">Liquid Network</a></li>
+                                    <li> <a href="index.html">AQUA Wallet</a></li>
+                                    <li> <a href="../amp/index.html">Blockstream AMP</a></li>
+                                    <li> <a href="../green/index.html">Blockstream Green</a></li>
+                                    <li> <a href="../mining/index.html">Blockstream Mining</a></li>
+                                </ul>
+                                <ul>
+                                    <li> <a href="../satellite/index.html">Blockstream Satellite</a></li>
+                                    <li> <a href="https://blockstream.info/" target="_blank">Blockstream Explorer</a>
+                                    </li>
+                                    <li> <a href="../cryptofeed/index.html">Cryptocurrency Data Feed</a></li>
+                                    <li> <a href="../lightning/index.html">Lightning Network</a></li>
+                                    <li> <a href="../elements/index.html">Elements</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-sitemap_otherlinks">
+                            <div>
+                                <h4 class="footer-title">Developers</h4>
+                                <ul class="collapse">
+                                    <li> <a href="https://medium.com/blockstream" target="_blank">Engineering Blog</a>
+                                    </li>
+                                    <li> <a href="https://docs.blockstream.com/" target="_blank">Documentation</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="footer-title">Company</h4>
+                                <ul class="collapse">
+                                    <li> <a href="../research/index.html">Research</a></li>
+                                    <li> <a href="../about/index.html">About</a></li>
+                                    <li> <a href="../careers/index.html">Careers</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="footer-title">Resources</h4>
+                                <ul class="collapse">
+                                    <li> <a href="https://help.blockstream.com/">Support</a></li>
+                                    <li> <a href="../contact/index.html">Contact</a></li>
+                                    <li> <a href="../brand-assets/index.html">Brand Assets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><a id="back-to-top"></a>
+        </footer>
+    </div><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128212180-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-128212180-1');
+    </script>
+</body>
+<!-- Mirrored from blockstream.com/aqua/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Nov 2020 08:40:45 GMT -->
+
+</html>

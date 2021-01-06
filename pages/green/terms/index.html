@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../css/styles8c7a.css?v=1.103">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="../../img/img/favicon_new.png"> <!-- font awesome -->
+    <link href="../../assets/font-awesome/css/all.min.css" rel="stylesheet"> <!-- rss feed -->
+    <link rel="alternate" type="application/rss+xml" title="Blockstream: Bitcoin & digital asset infrastructure"
+        href="../../feed.xml"> <!-- needs to load before dom so author name gets formatted -->
+    <script type="text/javascript" src="../../assets/js/utility-scripts/blog-author.js"></script>
+    <script type="text/javascript" src="../../assets/js/header_backdrop.js" defer></script>
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../../unpkg.com/axios%400.21.0/dist/axios.min.js" defer></script>
+    <script type="text/javascript" src="../../assets/js/utility-scripts/blog-language-selection.js" defer></script>
+    <!-- landing page -->
+    <script type="text/javascript" src="../../assets/js/navigationedce.js?v=1.101" defer></script>
+    <script type="text/javascript" src="../../assets/js/fly-in.js" async></script>
+    <script type="text/javascript" src="../../assets/js/facebook-sdk.js" async></script>
+    <script type="text/javascript" src="../../assets/js/formSubmission.js" async></script>
+    <script type="text/javascript" src="../../assets/js/back-to-top.js" defer></script>
+    <script type="text/javascript" src="../../assets/js/utility-scripts/modals.js" defer></script> <!-- transifex -->
+    <script type="text/javascript">
+        window.liveSettings = {
+            api_key: "de04b1185f2b4c2faf732d4994f9a7d6"
+        }
+    </script>
+    <script type="text/javascript" src="../../../cdn.transifex.com/live.js" defer></script>
+    <script type="text/javascript" src="../../assets/js/utility-scripts/language-selector.js" defer></script>
+    <!-- analytics tracking code -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136091963-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-136091963-1');
+    </script> <!-- hotjar tracking code -->
+    <!-- Hotjar Tracking Code for www.blockstream.com -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 1351588,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script> <!-- meta data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:url" content="https://blockstream.com/green/terms/" />
+    <meta property="og:site_name" content="Blockstream: Bitcoin and digital asset infrastructure" />
+    <meta content="Blockstream: Bitcoin and digital asset infrastructure" />
+    <title>Blockstream Green</title>
+    <meta property="og:title" content="Blockstream Green">
+    <meta name="twitter:title" content="Blockstream Green" />
+    <meta property="og:description"
+        content="Blockstream Green is our industry-leading Bitcoin wallet, providing Bitcoin users with an unrivaled blend of security and ease-of-use.">
+    <meta name="twitter:description"
+        content="Blockstream Green is our industry-leading Bitcoin wallet, providing Bitcoin users with an unrivaled blend of security and ease-of-use.">
+    <meta name="description"
+        content="Blockstream Green is our industry-leading Bitcoin wallet, providing Bitcoin users with an unrivaled blend of security and ease-of-use.">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website" /> <!-- sets meta image to be used for social shares -->
+    <meta property="og:image" content="https://blockstream.com/img/img/blks_logo_1920x1080.png" />
+    <meta name="twitter:image" content="https://blockstream.com/img/img/blks_logo_1920x1080.png" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header_primary" id="header-primary">
+            <div class="header_primary_logo"> <a href="../../index.html"><img src="../../img/icons/logo_blks.png"
+                        alt="Blockstream"></a></div>
+            <div class="hamburger header_primary_mobile-menu-button" onclick="mobileNavToggle()">
+                <div class="bar top"></div>
+                <div class="bar middle"></div>
+                <div class="bar bottom"></div>
+            </div>
+            <nav class="header_primary_navigation">
+                <ul class="header_primary_navigation_list">
+                    <li class="header_primary_navigation_item"> <a
+                            class='header_primary_navigation_item_link header_primary_navigation_dropdown-button '
+                            id="nav-dropdown-products" href="#" onclick="mobileNavDropdown(event)"> Products <span>
+                                <div class="arrow-icon">
+                                    <div class="arrow a-top"></div>
+                                    <div class="arrow a-bottom"></div>
+                                </div>
+                            </span> </a>
+                        <ul class="header_primary_navigation_item_sub-list" id="primary_navigation_list_products">
+                            <li class="header_primary_navigation_item_sub-list_header">
+                                <ul class="product-subnav-grid-container">
+                                    <li class="header_primary_navigation_item_sub-list_item liquid-gradBg"
+                                        id="primary_navigation_liquid"> <a class='product-subnav-grid-container_link '
+                                            data-nav-item="liquid" href="../../liquid/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Liquid Network</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        A sidechain-based settlement network for traders.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_liquid_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover liquid-grad-hover '
+                                            data-nav-item="liquid" href="../../liquid/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Liquid Network</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        A sidechain-based settlement network for traders.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_liquid_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item aqua-gradBg"
+                                        id="primary_navigation_block-explorer"> <a
+                                            class='product-subnav-grid-container_link ' data-nav-item="aqua"
+                                            href="../../aqua/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        AQUA</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        A simple Bitcoin and Liquid wallet built for everyone.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_aqua_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover aqua-gradBg-hover '
+                                            data-nav-item="aqua" href="../../aqua/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        AQUA</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        A simple Bitcoin and Liquid wallet built for everyone.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_aqua_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item amp-gradBg"
+                                        id="primary_navigation_block-explorer"> <a
+                                            class='product-subnav-grid-container_link ' data-nav-item="amp"
+                                            href="../../amp/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream AMP</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        An API to issue and manage digital assets on the Liquid Network.
+                                                    </p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_amp_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover amp-gradBg-hover '
+                                            data-nav-item="amp" href="../../amp/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream AMP</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        An API to issue and manage digital assets on the Liquid Network.
+                                                    </p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_amp_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item green-gradBg"
+                                        id="primary_navigation_ice"> <a class='product-subnav-grid-container_link '
+                                            data-nav-item="green-address" href="../index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Green</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        A multi-platform, feature-rich Bitcoin and Liquid wallet.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_green_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover green-gradBg-hover '
+                                            data-nav-item="green-address" href="../index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Green</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        A multi-platform, feature-rich Bitcoin and Liquid wallet.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_green_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item mining-gradBg"
+                                        id="primary_navigation_green-address"> <a
+                                            class='product-subnav-grid-container_link ' data-nav-item="mining"
+                                            href="../../mining/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Mining</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Colocation services for Bitcoin mining operations.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_mining_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover mining-gradBg-hover '
+                                            data-nav-item="mining" href="../../mining/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Mining</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Colocation services for Bitcoin mining operations.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_mining_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item satellite-gradBg"
+                                        id="primary_navigation_satellite"> <a
+                                            class='product-subnav-grid-container_link ' data-nav-item="satellite"
+                                            href="../../satellite/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Satellite</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        The Bitcoin blockchain, delivered from space.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_satellite_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover satellite-gradBg-hover '
+                                            data-nav-item="satellite" href="../../satellite/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Satellite</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        The Bitcoin blockchain, delivered from space.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_satellite_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item explorer-gradBg"
+                                        id="primary_navigation_mining"> <a class='product-subnav-grid-container_link'
+                                            data-nav-item="block-explorer" href="https://blockstream.info/"
+                                            target="_blank">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Explorer</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Search data from the Bitcoin and Liquid blockchains.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_explorer_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover explorer-gradBg-hover'
+                                            data-nav-item="block-explorer" href="https://blockstream.info/"
+                                            target="_blank">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Blockstream Explorer</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Search data from the Bitcoin and Liquid blockchains.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_explorer_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item crypto-gradBg"
+                                        id="primary_navigation_mining"> <a class='product-subnav-grid-container_link '
+                                            data-nav-item="ice" href="../../cryptofeed/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Cryptocurrency Data Feed</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Real-time and historical cryptocurrency trade data.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_datafeed_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover crypto-gradBg-hover '
+                                            data-nav-item="ice" href="../../cryptofeed/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Cryptocurrency Data Feed</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Real-time and historical cryptocurrency trade data.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_datafeed_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item lightning-gradBg"
+                                        id="primary_navigation_mining"> <a class='product-subnav-grid-container_link '
+                                            data-nav-item="lightning" href="../../lightning/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Lightning Network</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Our own implementation of the Lightning protocol.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_lightning_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover lightning-gradBg-hover '
+                                            data-nav-item="lightning" href="../../lightning/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Lightning Network</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        Our own implementation of the Lightning protocol.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_lightning_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li class="header_primary_navigation_item_sub-list_item elements-gradBg"
+                                        id="primary_navigation_block-explorer"> <a
+                                            class='product-subnav-grid-container_link ' data-nav-item="elements"
+                                            href="../../elements/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Elements</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        An open-source, sidechain-capable blockchain platform.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_elements_outline.svg" />
+                                                </div>
+                                            </div>
+                                        </a> <a class='product-subnav-grid-container_link_hover elements-gradBg-hover '
+                                            data-nav-item="elements" href="../../elements/index.html">
+                                            <div class="header_primary_navigation_item_sub-list_item_link">
+                                                <div class="header_primary_navigation_item_sub-list_item_link_block">
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_title">
+                                                        Elements</p>
+                                                    <p
+                                                        class="header_primary_navigation_item_sub-list_item_link_block_text">
+                                                        An open-source, sidechain-capable blockchain platform.</p>
+                                                </div>
+                                                <div class="product-subnav-grid-container_icon"> <img
+                                                        src="../../img/nav_icons/navigation_icons_elements_solid.svg" />
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                </ul>
+                            </li>
+                            <!--<li class="footer-header"><div class="product-nav-footer"><div class="product-nav-footer_hover"> <a href="https://help.blockstream.com/">Support</a> <a href="https://help.blockstream.com/">Support</a></div></div></li>-->
+                        </ul>
+                    </li>
+                    <li class="header_primary_navigation_item"> <a
+                            class='header_primary_navigation_item_link header_primary_navigation_dropdown-button'
+                            id="nav-dropdown-news" href="#" onclick="mobileNavDropdown(event)"> Newsroom <span>
+                                <div class="arrow-icon">
+                                    <div class="arrow a-top"></div>
+                                    <div class="arrow a-bottom"></div>
+                                </div>
+                            </span> </a>
+                        <ul class="header_primary_navigation_item_sub-list" id="primary_navigation_list_news">
+                            <li class="header_primary_navigation_item_sub-list_header">
+                                <ul class="subnav-grid-container">
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_blog">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title blog-link'
+                                                    href="#" data-nav-item="blog" onclick="blogLinkClicked(event)"> <i
+                                                        class="fal fa-edit header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Blog</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_press-newsroom">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                    href="../../newsroom/index.html" data-nav-item="newsroom"> <i
+                                                        class="fal fa-newspaper header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>In
+                                                    The News</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_press-release">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                    href="../../press-releases/index.html"
+                                                    data-nav-item="press-release"> <i
+                                                        class="fal fa-list-alt header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Press
+                                                    Releases</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_brand-assets">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                    href="../../brand-assets/index.html" data-nav-item="brand-assets">
+                                                    <i
+                                                        class="fal fa-toolbox header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Brand
+                                                    Assets</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header_primary_navigation_item"> <a
+                            class='header_primary_navigation_item_link header_primary_navigation_dropdown-button'
+                            id="nav-dropdown-developer" href="#" onclick="mobileNavDropdown(event)"> Developers <span>
+                                <div class="arrow-icon">
+                                    <div class="arrow a-top"></div>
+                                    <div class="arrow a-bottom"></div>
+                                </div>
+                            </span> </a>
+                        <ul class="header_primary_navigation_item_sub-list" id="primary_navigation_list_developer">
+                            <li class="header_primary_navigation_item_sub-list_header">
+                                <ul class="subnav-grid-container">
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_eng-blog">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title'
+                                                    href="https://medium.com/blockstream" target="blank"
+                                                    data-nav-item="eng-blog"> <i
+                                                        class="fal fa-cog header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Engineering
+                                                    Blog</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_documentation">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title'
+                                                    href="https://docs.blockstream.com/" target="blank"
+                                                    data-nav-item="documentation"> <i
+                                                        class="fal fa-code header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Documentation</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header_primary_navigation_item"> <a
+                            class='header_primary_navigation_item_link header_primary_navigation_dropdown-button '
+                            id="nav-dropdown-about" href="#" onclick="mobileNavDropdown(event)"> Company <span>
+                                <div class="arrow-icon">
+                                    <div class="arrow a-top"></div>
+                                    <div class="arrow a-bottom"></div>
+                                </div>
+                            </span> </a>
+                        <ul class="header_primary_navigation_item_sub-list" id="primary_navigation_list_about">
+                            <li class="header_primary_navigation_item_sub-list_header">
+                                <ul class="subnav-grid-container">
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_research">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                    href="../../research/index.html" data-nav-item="research"> <i
+                                                        class="fal fa-book-open header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Research</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_about">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                    href="../../about/index.html" data-nav-item="about"> <i
+                                                        class="fal fa-building header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>About</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header_primary_navigation_item_sub-list_item"
+                                        id="primary_navigation_careers">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title '
+                                                    href="../../careers/index.html" data-nav-item="careers"> <i
+                                                        class="fal fa-user header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Careers</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header_primary_navigation_item_sub-list_item">
+                                        <div class="header_primary_navigation_item_sub-list_item_link">
+                                            <div class="header_primary_navigation_item_sub-list_item_link_block"> <a
+                                                    class='header_primary_navigation_item_sub-list_item_link_block_title'
+                                                    href="https://www.blockstreamscamdb.com/"> <i
+                                                        class="fal fa-database header_primary_navigation_item_sub-list_item_link_icon header_primary_navigation_item_sub-list_item_link_icon_font-awesome"></i>Scam
+                                                    DB</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header_primary_navigation_item store-link"> <a
+                            class="header_primary_navigation_item_link " href="https://store.blockstream.com/">Store</a>
+                    </li>
+                    <li class="header_primary_navigation_item store-link"> <a
+                            class="header_primary_navigation_item_link "
+                            href="https://help.blockstream.com/">Support</a></li>
+                    <li class="header_primary_navigation_item header_primary_navigation_item_no-line">
+                        <div class="language-button" id="language-selector"></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="green-terms">
+            <div class="title-section fly">
+                <div class="title-section_title ">
+                    <h3>Terms of Service</h3>
+                </div>
+                <div class="">
+                    <hr class="title-section_underline title-section_underline_green" />
+                    <div class="title-section_text"></div>
+                </div>
+            </div>
+            <div class="green-terms_content fly">
+                <div class="green-terms_content_intro">
+                    <p class="green-terms_content_intro_last-updated"> Last updated April 21, 2019</p>
+                    <p class="green-terms_content_intro_text"> This is a contract (the
+                        <em><strong>“Agreement”</strong></em>) between you and GreenAddressIT Limited
+                        (<em><strong>“GreenAddress” “we”</strong></em> or <strong><em>“us”</strong></em>), a company
+                        registered and incorporated under the laws of Malta with company number C62738 and whose
+                        registered office is Vincenti Buildings 28/19 (Suite 1405), Strait Street, VLT1432 Valletta,
+                        Malta and a wholly-owned, indirect subsidiary of Blockstream Corporation Inc.. References in
+                        this Agreement to “you” and “your” are to the person with whom GreenAddress enters into this
+                        Agreement.</p>
+                    <p class="green-terms_content_intro_text"> By clicking on “I agree” or similar terms when creating a
+                        Wallet (as defined below) through www.greenaddress.it or any of our associated browser
+                        extensions, websites, APIs, or mobile applications (collectively, the
+                        <strong><em>“Services”</strong></em>), or by proceeding with a download or update for a Wallet
+                        when offered a choice of proceeding or not, you are agreeing to be bound by the terms and
+                        conditions found in this Agreement. You represent and warrant that you have the power and
+                        capacity to enter into this Agreement.</p>
+                </div>
+                <ol class="green-terms_content_list">
+                    <!-- 1 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">GreenAddress Services</div>
+                        <p class="green-terms_content_list_item_text"> The GreenAddress Services enable you to create
+                            one or more multi-signature, hierarchical deterministic (HD), non-custodial cryptocurrency
+                            wallets for certain supported digital assets (<strong><em>“Wallet”</strong></em>) and to use
+                            the Wallet to store, send, request and receive supported digital assets.</p>
+                        <p class="green-terms_content_list_item_text"> Our Services are intended for use by persons who
+                            are very knowledgeable about cryptocurrency generally and HD non-custodial wallets in
+                            particular. If you use our Services, you represent that you qualify as such a person. You
+                            acknowledge and agree that you have carefully read and understood our <a
+                                href="https://greenaddress.it/en/faq.html" target="blank">FAQ</a>.</p>
+                    </li><!-- 2 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Supported Digital Assets</div>
+                        <p class="green-terms_content_list_item_text"> Our Services, including any Wallet, are for use
+                            with Bitcoin (BTC) only and any other digital assets we may explicitly decide to support in
+                            the future at our discretion (<strong><em>“Digital Assets”</strong></em>). We have no
+                            obligation to support any digital assets (including but not limited to any forkcoins,
+                            altcoins, airdrops or any other digital assets however named) other than Bitcoin or any
+                            other digital asset we may explicitly decide to support in the future at our discretion. We
+                            assume no responsibility or liability in connection with any attempt to use your Wallet for
+                            digital assets that we do not support. Keys or signatures held or produced by us belong to
+                            us and we reserve all rights to and associated with them.</p>
+                    </li><!-- 3 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Responsibility for Mnemonics, PINs and Other
+                            Authentication Means</div>
+                        <p class="green-terms_content_list_item_text"> Our Services provide a number of ways for you to
+                            secure your Wallet and help ensure you, and only you, are able to access and transact
+                            through your Wallet. These features include mnemonics, personal identification numbers
+                            (PINs), two-factor authentication, 2of2 and 2of3 signing, among other features.
+                            <br /><strong><em>We do not store or have access to your mnemonics, PINs or private
+                                    keys.</strong></em></p>
+                        <p class="green-terms_content_list_item_text"> It is your responsibility to carefully guard your
+                            mnemonics, PINs, two-factor authentication means, and any other means we may provide for you
+                            to secure and access your Wallet. If you forget or lose your means of authentication
+                            GreenAddress has no way to recover them for you and you may permanently lose access to any
+                            Digital Assets you have stored in your Wallet.</p>
+                    </li><!-- 4 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Mnemonics and Catastrophic Impact of Their Loss
+                            or Misappropriation</div>
+                        <p class="green-terms_content_list_item_text"> If you use our Services to create a Wallet, the
+                            software will use an algorithm to generate a random 24-word phrase as a seed to a BIP32
+                            hierarchical wallet. This 24-word phrase is called a mnemonic and if reproduced exactly
+                            stores all the information needed to recover your Wallet if access through a PIN, two-factor
+                            authentication or other authentication means is lost or otherwise not available. For 2of2
+                            non CSV wallets enabling and retaining recovery nlocktime zip files is also necessary for
+                            recovery purposes.</p>
+                        <p class="green-terms_content_list_item_text"> <strong><em>GreenAddress does not store, have
+                                    access to, or have any way or means of recovering your mnemonic.</strong></em></p>
+                        <p class="green-terms_content_list_item_text"> It is your responsibility to keep your mnemonic
+                            secure. You should not provide it to anyone, including any GreenAddress representative.</p>
+                        <p class="green-terms_content_list_item_text"> <strong><em>If you permanently forget or lose
+                                    your mnemonic, you will NEVER be able to recover any cryptocurrency in your Wallet,
+                                    and you will suffer a complete, irrecoverable and catastrophic loss of all Digital
+                                    Assets in your Wallet.</strong></em></p>
+                        <p class="green-terms_content_list_item_text"> <strong><em>It is your responsibility to
+                                    safeguard and retain your mnemonic. GreenAddress has no responsibility and will not
+                                    be liable for any loss or damage you suffer from the loss or misappropriation of
+                                    your mnemonic.</strong></em></p>
+                    </li><!-- 5 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Recovery Feature and Risks</div>
+                        <p class="green-terms_content_list_item_text"> We may provide a recovery feature to help protect
+                            you from loss of access to Digital Assets in a 2of2 signature Wallet should our Services
+                            become unavailable. Any such feature will not be available to you if you have not secured
+                            your mnemonic as described above.</p>
+                        <p class="green-terms_content_list_item_text"> The recovery feature sets a default waiting
+                            period before you may transfer Digital Assets in your Wallet. You may change this default to
+                            a different period in your Wallet settings.</p>
+                        <p class="green-terms_content_list_item_text"> During the recovery waiting period, if the
+                            Services are unavailable or if you have lost all enabled two-factor authentication means,
+                            you will not be able to transact in or transfer any Digital Assets in your Wallet. As a
+                            result, during this period your Digital Assets in your Wallet will not be liquid, and you
+                            will not be able to take advantage of increases in the market price of Digital Assets or
+                            protect yourself from decreases in market prices.</p>
+                    </li><!-- 6 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Two-Factor Authentication Reset</div>
+                        <p class="green-terms_content_list_item_text"> If you lose access to all two-factor
+                            authentication methods but still have your mnemonic, the Services may provide a two-factor
+                            reset from within your Wallet, which should enable access after a grace period of at least
+                            one year.</p>
+                        <p class="green-terms_content_list_item_text"> During the grace period your Wallet will be read
+                            only, and you will not be able to transact in or transfer any Digital Assets in your Wallet.
+                            As a result, during this period you will be exposed to the same risks set out above under
+                            the heading “Recovery Feature and Risks”.</p>
+                        <p class="green-terms_content_list_item_text"> The grace period will be extended for any
+                            unexpired recovery period as of the date you start the two-factor authentication reset and
+                            for any period in which the reset process is disputed.</p>
+                        <p class="green-terms_content_list_item_text"> A reset process may be disputed within your
+                            Wallet. In the event of a dispute the reset process will be halted. Any determination by
+                            GreenAddress concerning the dispute process will be final and binding on you, including a
+                            determination that the Wallet will be permanently inaccessible so long as it is disputed.
+                        </p>
+                    </li><!-- 7 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Intellectual Property</div>
+                        <p class="green-terms_content_list_item_text"> We grant you a limited, personal,
+                            non-transferable, non-exclusive license to access and use the Website and to use the
+                            Services as provided to you by GreenAddress, subject to the terms of this Agreement and
+                            solely for approved purposes as permitted by us from time to time, except that we license
+                            certain of our software under the licenses set out in the source code repositories available
+                            <a target="blank" href="https://github.com/blockstream/green_android">here</a>, <a
+                                target="blank" href="https://github.com/blockstream/green_ios">here</a> and <a
+                                target="blank" href="https://github.com/greenaddress/WalletElectron">here</a>. Any other
+                            use of the Website or the Services is expressly prohibited and all other rights, titles and
+                            interests in the Website and the Services are exclusively the property of GreenAddress and
+                            its licensors. “GreenAddress” and all logos related to the Services or displayed on the
+                            Website are trademarks of GreenAddress or its licensors. You may not copy, imitate or use
+                            them without our prior written consent.</p>
+                    </li><!-- 8 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Third Party Integrations</div>
+                        <p class="green-terms_content_list_item_text"> Our Services support or are integrated with third
+                            party services. We are not responsible for any third party services and will not be liable
+                            for any loss or damage caused by third party services.</p>
+                    </li><!-- 9 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Changes to or Termination of our Services</div>
+                        <p class="green-terms_content_list_item_text"> We may add or remove functions or features of our
+                            Services. You can stop using our Services at any time. We may stop providing our Services at
+                            any time at our discretion.</p>
+                        <p class="green-terms_content_list_item_text"> If we stop providing our Services, for whatever
+                            reason, we will endeavor to provide advance notice to you. However, we will have no
+                            obligation to do so. If our Services are terminated abruptly without notice, for whatever
+                            reason, the recovery feature should allow you to transfer your Digital Assets out of your
+                            Wallet after the applicable recovery period. However, during the recovery period, you will
+                            be exposed to the risks described above under the heading “Recovery Feature and Risks”.
+                            GreenAddress has no responsibility and will not be liable for any loss or damage you suffer
+                            from the loss of access to or use of your Wallet during any recovery period or for any
+                            termination of our Services.</p>
+                    </li><!-- 10 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Your Compliance with Applicable Laws</div>
+                        <p class="green-terms_content_list_item_text"> You represent and warrant that you are using the
+                            Services, including any Wallet, in accordance with applicable law, and not for any purpose
+                            not in compliance with applicable law, including but not limited to illegal gambling, fraud,
+                            money laundering or terrorist activities.</p>
+                    </li><!-- 11 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Disclaimer of Warranties</div>
+                        <p class="green-terms_content_list_item_text"> All GreenAddress Services, including any Wallet,
+                            are provided on an “as is” and “as available” basis without any representation or warranty
+                            of any kind, whether express or implied, to the maximum extent permitted by applicable law.
+                            Specifically, we disclaim any implied warranties of title, merchantability, fitness for a
+                            particular purpose and/or non-infringement.</p>
+                    </li><!-- 12 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Exclusion and Limitation of Liability</div>
+                        <p class="green-terms_content_list_item_text"> <strong><em>In no event will GreenAddress, its
+                                    directors, officers, employees, suppliers, agents or affiliates be liable for any
+                                    loss or damages, including without limitation, direct, indirect, special,
+                                    consequential, exemplary or punitive loss or damages, arising from or related to
+                                    your use of the Services or a Wallet, including but not limited to loss of or
+                                    inability to access or transact data, profit, Digital Assets, or other digital
+                                    assets or cryptocurrency.</strong></em></p>
+                        <p class="green-terms_content_list_item_text"> Without limiting the generality of the foregoing,
+                            GreenAddress takes no responsibility for and will not be liable for any financial or other
+                            loss or damage arising from or related to the use of our Services, including Wallets,
+                            including but not limited to any of the following.</p>
+                        <div class="green-terms_content_list_item_text">
+                            <ul class="green-terms_content_list_item_sub-list">
+                                <li>Financial loss due to Wallet access being "Brute-forced".</li>
+                                <li>Financial loss due to server failure or data loss.</li>
+                                <li>Financial loss due to server hacks or unavailability.</li>
+                                <li>Financial loss due to forgotten mnemonics or passwords.</li>
+                                <li>Financial loss due to inability to transact.</li>
+                                <li>Financial loss due to lost or inaccessible two factor authentication (2FA)
+                                    mechanisms.</li>
+                                <li>Financial loss due to inability to transact during any 2FA authentication reset
+                                    grace period.</li>
+                                <li>Financial loss due to an adverse resolution of a 2FA authentication reset dispute.
+                                </li>
+                                <li>Financial loss due to errors calculating network fees.</li>
+                                <li>Financial loss due to corrupted data on our servers.</li>
+                                <li>Financial loss due to incorrectly constructed transactions or mistyped bitcoin
+                                    addresses.</li>
+                                <li>Financial loss due to "phishing" or other websites masquerading as GreenAddress.
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="green-terms_content_list_item_text"> GreenAddress takes no responsibility for, and
+                            will not be liable for, our Services being unavailable due to technical or other issues
+                            beyond our control.</p>
+                        <p class="green-terms_content_list_item_text"> <strong><em>The total liability of GreenAddress,
+                                    its directors, officers, employees, suppliers, agents or affiliates arising from or
+                                    related to the Services, including Wallets, in the aggregate for all claims is
+                                    limited to USD 50 or 40 EUR.</strong></em></p>
+                        <p class="green-terms_content_list_item_text"> The exclusions and limitations of our liability
+                            in this Section 12 are subject to any obligations that we have under applicable law and
+                            regulations, including possible liability for loss or damages resulting from our fraud,
+                            gross negligence or willful misconduct.</p>
+                    </li><!-- 13 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Indemnification</div>
+                        <p class="green-terms_content_list_item_text"> You will hold harmless and indemnify
+                            GreenAddress, its directors, officers, employees, suppliers, agents or affiliates from and
+                            against any claim, suit or action arising from or related to your use of the Services,
+                            including Wallets, or violation of this Agreement, including any liability arising from
+                            claims, losses, damages, suits, judgments, litigation costs and attorneys’ fees.</p>
+                    </li><!-- 14 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">What the GreenAddress Service Does Not Do</div>
+                        <p class="green-terms_content_list_item_text"> We do not exchange digital currency for real
+                            currency, funds, or other digital currency.</p>
+                        <p class="green-terms_content_list_item_text"> We do not issue or put into circulation a digital
+                            currency or redeem or withdraw from circulation digital currency.</p>
+                        <p class="green-terms_content_list_item_text"> We do not have access to your Wallet or any
+                            Digital Assets stored in it. Any Digital Assets stored using the Services are not in our
+                            control. As explained above, we do not store or have any means of recovering your private
+                            keys, mnemonics, PINs or passwords.</p>
+                        <p class="green-terms_content_list_item_text"> GreenAddress is not a bank, custodian, exchange,
+                            financial intermediary or regulated financial institution. GreenAddress does not have
+                            control over or take any responsibility for any transactions made through our Services. We
+                            do not accept any deposits from, lend to, or generally engage in any kind of banking
+                            business or the business of a financial institution, whether in or from within Malta or
+                            otherwise.</p>
+                        <p class="green-terms_content_list_item_text"> Our Services are for supported Digital Assets
+                            only. Any prices displayed are provided by 3rd party services and are not indicative of the
+                            Digital Assets being backed by any commodity or other form of money or having any other
+                            tangible value at all. GreenAddress makes no guarantees that Bitcoins or other Digital
+                            Assets can be exchanged or sold at the price displayed.</p>
+                        <p class="green-terms_content_list_item_text"> We have no control over and do not make any
+                            representations regarding the value of Digital Assets, or the operation of the underlying
+                            software protocols which govern the operation of Digital Assets supported on our platform.
+                            We assume no responsibility for the operation of the underlying protocols and we are not
+                            able to guarantee their functionality, security or availability.</p>
+                    </li><!-- 15 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Information on our Website</div>
+                        <p class="green-terms_content_list_item_text"> The information contained on our website is for
+                            general information purposes only. The information is provided by GreenAddress and while we
+                            endeavor to keep the information up to date and correct, we make no representations or
+                            warranties of any kind, express or implied, about the completeness, accuracy, reliability,
+                            suitability or availability with respect to the website or the information, products,
+                            services, or related graphics contained on the website for any purpose. Any reliance you
+                            place on such information is therefore strictly at your own risk.</p>
+                    </li><!-- 16 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Governing Law and Dispute Resolution</div>
+                        <p class="green-terms_content_list_item_text"> (a) If you are resident outside the United
+                            States, this Agreement will be governed by English law and the non-exclusive jurisdiction of
+                            the English courts. However, if you are an individual not engaged in conduct related to your
+                            trade, business or profession, and you are resident outside England and Wales, you may also
+                            petition the courts of the jurisdiction in which you reside (<strong><em>"Home
+                                    Jurisdiction"</strong></em>) and the law governing this Agreement may include any
+                            such consumer laws of your Home Jurisdiction that provide greater consumer protection than
+                            is available under English law.</p>
+                        <p class="green-terms_content_list_item_text"> (b) If you are resident in the United States,
+                            this Agreement is governed by the laws (but not those relating to conflict of laws) of
+                            California and you agree that any dispute arising under this Agreement will be finally
+                            settled in binding arbitration, on an individual basis, in accordance with the American
+                            Arbitration Association's rules for arbitration of consumer-related disputes (accessible
+                            here) and you and we hereby expressly waive trial by jury and right to participate in a
+                            class action lawsuit or class-wide arbitration. The arbitration will be conducted by a
+                            single, neutral arbitrator and will take place in the county or parish in which you reside,
+                            or another mutually agreeable location, in the English language. The arbitrator may award
+                            any relief that a court of competent jurisdiction could award, including attorneys' fees
+                            when authorized by law, and the arbitral decision may be enforced in any court. At your
+                            request, hearings may be conducted in person or by telephone and the arbitrator may provide
+                            for submitting and determining motions on briefs, without oral hearings. The prevailing
+                            party in any action or proceeding to enforce this Agreement will be entitled to costs and
+                            attorneys' fees.</p>
+                        <p class="green-terms_content_list_item_text"> If the arbitrator(s) or arbitration administrator
+                            would impose filing fees or other administrative costs on you, we will reimburse you, upon
+                            request, to the extent such fees or costs would exceed those that you would otherwise have
+                            to pay if you were proceeding instead in a court. We will also pay additional fees or costs
+                            if required to do so by the arbitration administrator's rules or applicable law. Apart from
+                            the foregoing, each of us will be responsible for our own fees or costs, such as attorney
+                            fees that we each may incur. If a court decides that any provision of this section is
+                            invalid or unenforceable, that provision will be severed and the other parts of this section
+                            will still apply. In any case, the remainder of the terms of this agreement will continue to
+                            apply.</p>
+                    </li><!-- 17 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Data Protection</div>
+                        <p class="green-terms_content_list_item_text"> You acknowledge that we may collect, use, store
+                            and process personal data in relation to you (if you are an individual), and personal data
+                            that you have provided or in the future provide to us in relation to your employees and
+                            other associated or other individuals, in connection with this Agreement, or the Services.
+                        </p>
+                        <p class="green-terms_content_list_item_text"> For more information on the way in which we
+                            process the information about you, please refer to our <a
+                                href="../privacy/index.html">Privacy Policy</a>.</p>
+                    </li><!-- 18 -->
+                    <li class="green-terms_content_list_item">
+                        <div class="green-terms_content_list_item_title">Miscellaneous</div>
+                        <p class="green-terms_content_list_item_text"> No action or inaction by GreenAddress will be
+                            considered a waiver of any right or obligation by GreenAddress.</p>
+                        <p class="green-terms_content_list_item_text"> This Agreement may be amended by GreenAddress by
+                            providing you advance notice of any proposed change. If you do not agree to the amended
+                            agreement then your sole remedy will be to stop using the Services, including any Wallet.
+                        </p>
+                        <p class="green-terms_content_list_item_text"> You may not assign this Agreement. GreenAddress
+                            may assign this Agreement.</p>
+                        <p class="green-terms_content_list_item_text"> This Agreement controls the relationship between
+                            GreenAddress and you. They do not create any third party beneficiary rights.</p>
+                        <p class="green-terms_content_list_item_text"> Your use of the Services, any Wallet and the
+                            Website is subject to international export controls and economic sanctions requirements. You
+                            agree that you will comply with those requirements. You are not permitted to use any of the
+                            Services if: (1) you are in, under the control of, or a national or resident of Cuba, Iran,
+                            North Korea, Sudan, or Syria or any other country subject to United States embargo or UN
+                            sanctions (a <strong><em>"Sanctioned Country"</strong></em>), or if you are a person on the
+                            U.S. Treasury Department's Specially Designated Nationals List or the U.S. Commerce
+                            Department's Denied Persons List, Unverified List or Entity List, (a "Sanctioned Person");
+                            or (2) you intend to supply any Digital Assets in a Wallet to a Sanctioned Country (or a
+                            national or resident of a Sanctioned Country) or Sanctioned Person.</p>
+                        <p class="green-terms_content_list_item_text"> All provisions of this Agreement which by their
+                            nature extend beyond the expiration or termination of this Agreement, will continue to be
+                            binding and operate after the termination or expiration of this Agreement. If a particular
+                            term of this Agreement is determined to be invalid or not enforceable under any applicable
+                            law, this will not affect the validity of any other term. This Agreement (including
+                            documents incorporated by reference in it) is the entire agreement between GreenAddress and
+                            you and supersedes any other agreement, representations (or misrepresentations), or
+                            understanding, however communicated.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <footer>
+            <div class="social-mobile">
+                <div class="social-links"> <a href="https://twitter.com/Blockstream" target="_blank"> <i
+                            class="fab fa-twitter"></i> </a> <a href="https://ca.linkedin.com/company/blockstream"
+                        target="_blank"> <i class="fab fa-linkedin-in"></i> </a> <a
+                        href="https://www.facebook.com/Blockstream/" target="_blank"> <i class="fab fa-facebook-f"></i>
+                    </a> <a href="https://github.com/Blockstream" target="_blank"> <i class="fab fa-github"></i> </a> <a
+                        href="https://www.youtube.com/channel/UCZNt3fZazX9cwWcC9vjDJ4Q" target="_blank"> <i
+                            class="fab fa-youtube"></i> </a></div>
+            </div>
+            <div id="footer">
+                <div class="footer-sitemap">
+                    <div class="footer-sitemap_logo-grid"> <img src="../../img/icons/BLKS_LOGO.svg" alt="Blockstream">
+                        <div class="social-desktop">
+                            <div class="social-links"> <a href="https://twitter.com/Blockstream" target="_blank"> <i
+                                        class="fab fa-twitter"></i> </a> <a
+                                    href="https://ca.linkedin.com/company/blockstream" target="_blank"> <i
+                                        class="fab fa-linkedin-in"></i> </a> <a
+                                    href="https://www.facebook.com/Blockstream/" target="_blank"> <i
+                                        class="fab fa-facebook-f"></i> </a> <a href="https://github.com/Blockstream"
+                                    target="_blank"> <i class="fab fa-github"></i> </a> <a
+                                    href="https://www.youtube.com/channel/UCZNt3fZazX9cwWcC9vjDJ4Q" target="_blank"> <i
+                                        class="fab fa-youtube"></i> </a></div>
+                        </div>
+                        <div class="footer-sitemap_logo-grid_terms_privacy">
+                            <ul>
+                                <li> <a href="../../terms/index.html">Terms</a></li>
+                                <li> <a href="../../privacy/index.html">Privacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-sitemap_logo-grid_copyright">
+                            <script type="text/javascript">
+                                document.write("&copy; " + new Date().getFullYear());
+                            </script> Blockstream Corporation Inc. All rights reserved.
+                        </div>
+                    </div>
+                    <div class="footer-sitemap_sitelinks">
+                        <div class="footer-sitemap_products">
+                            <h4 class="footer-title">Products</h4>
+                            <div class="footer-sitemap_products_twoColGrid collapse">
+                                <ul>
+                                    <li> <a href="../../liquid/index.html">Liquid Network</a></li>
+                                    <li> <a href="../../aqua/index.html">AQUA Wallet</a></li>
+                                    <li> <a href="../../amp/index.html">Blockstream AMP</a></li>
+                                    <li> <a href="../index.html">Blockstream Green</a></li>
+                                    <li> <a href="../../mining/index.html">Blockstream Mining</a></li>
+                                </ul>
+                                <ul>
+                                    <li> <a href="../../satellite/index.html">Blockstream Satellite</a></li>
+                                    <li> <a href="https://blockstream.info/" target="_blank">Blockstream Explorer</a>
+                                    </li>
+                                    <li> <a href="../../cryptofeed/index.html">Cryptocurrency Data Feed</a></li>
+                                    <li> <a href="../../lightning/index.html">Lightning Network</a></li>
+                                    <li> <a href="../../elements/index.html">Elements</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-sitemap_otherlinks">
+                            <div>
+                                <h4 class="footer-title">Developers</h4>
+                                <ul class="collapse">
+                                    <li> <a href="https://medium.com/blockstream" target="_blank">Engineering Blog</a>
+                                    </li>
+                                    <li> <a href="https://docs.blockstream.com/" target="_blank">Documentation</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="footer-title">Company</h4>
+                                <ul class="collapse">
+                                    <li> <a href="../../research/index.html">Research</a></li>
+                                    <li> <a href="../../about/index.html">About</a></li>
+                                    <li> <a href="../../careers/index.html">Careers</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="footer-title">Resources</h4>
+                                <ul class="collapse">
+                                    <li> <a href="https://help.blockstream.com/">Support</a></li>
+                                    <li> <a href="../../contact/index.html">Contact</a></li>
+                                    <li> <a href="../../brand-assets/index.html">Brand Assets</a></li>
+                                    <li> <a href="https://www.blockstreamscamdb.com/">Scam DB</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><a id="back-to-top"></a>
+        </footer>
+    </div><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128212180-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-128212180-1');
+    </script>
+</body>
+<!-- Mirrored from blockstream.com/green/terms/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Nov 2020 08:45:08 GMT -->
+
+</html>
